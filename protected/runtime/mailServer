@@ -1,0 +1,1255 @@
+Feb 03 11:34:49 [system.CModule                ] : <T> Loading "log" application component
+Feb 03 11:34:49 [php                           ] : <E> Use of undefined constant INFO - assumed 'INFO' (/Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php:39)
+Stack trace:
+#0 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#1 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#2 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#3 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#4 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 11:34:49 [system.CModule                ] : <T> Loading "errorHandler" application component
+Feb 03 11:35:09 [system.CModule                ] : <T> Loading "log" application component
+Feb 03 11:35:09 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:35:09 [system.CModule                ] : <T> Loading "autoloader" application component
+Feb 03 11:35:09 [system.CModule                ] : <T> Loading "rabbitMQ" application component
+Feb 03 11:36:28 [system.CModule                ] : <T> Loading "log" application component
+Feb 03 11:36:28 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:36:28 [system.CModule                ] : <T> Loading "autoloader" application component
+Feb 03 11:36:28 [system.CModule                ] : <T> Loading "rabbitMQ" application component
+Feb 03 11:38:46 [system.CModule                ] : <T> Loading "log" application component
+Feb 03 11:39:51 [system.CModule                ] : <T> Loading "log" application component
+Feb 03 11:39:51 [INFO                          ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:39:51 [system.CModule                ] : <T> Loading "autoloader" application component
+Feb 03 11:39:51 [system.CModule                ] : <T> Loading "rabbitMQ" application component
+Feb 03 11:40:24 [INFO                          ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:40:43 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:41:08 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:41:08 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:41:47 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:41:47 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:41:53 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852113.510db251143a4@swift.generated>
+
+Feb 03 11:43:30 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:43:30 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:44:39 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:44:39 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:44:39 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:46:31 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:46:31 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:46:31 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:47:05 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:47:05 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:47:05 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:47:12 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:47:12 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:47:12 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:47:31 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:47:31 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:47:31 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:47:34 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852454.510db3a6aa2dd@swift.generated>
+
+Feb 03 11:47:38 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852458.510db3aab248d@swift.generated>
+
+Feb 03 11:47:41 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852461.510db3adb58b4@swift.generated>
+
+Feb 03 11:47:45 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852465.510db3b18c756@swift.generated>
+
+Feb 03 11:49:32 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:49:32 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:49:32 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:49:36 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852576.510db420ce23d@swift.generated>
+Feb 03 11:49:41 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852581.510db4254b44a@swift.generated>
+Feb 03 11:49:41 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852581.510db4257c935@swift.generated>
+Feb 03 11:49:45 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852585.510db429bd659@swift.generated>
+Feb 03 11:49:45 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852585.510db429f0bad@swift.generated>
+Feb 03 11:49:50 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852590.510db42e49066@swift.generated>
+Feb 03 11:49:50 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852590.510db42e798c0@swift.generated>
+Feb 03 11:49:55 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852595.510db4332781f@swift.generated>
+Feb 03 11:50:04 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852604.510db43c80143@swift.generated>
+Feb 03 11:50:08 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852608.510db440cb6f7@swift.generated>
+Feb 03 11:50:09 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852609.510db44108c13@swift.generated>
+Feb 03 11:50:13 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852613.510db4456bd0a@swift.generated>
+Feb 03 11:50:13 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852613.510db4459c990@swift.generated>
+Feb 03 11:50:17 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852617.510db44975534@swift.generated>
+Feb 03 11:50:17 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852617.510db449a7b7d@swift.generated>
+Feb 03 11:50:21 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852621.510db44dd831d@swift.generated>
+Feb 03 11:50:22 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852622.510db44e14e37@swift.generated>
+Feb 03 11:50:25 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852625.510db451ec950@swift.generated>
+Feb 03 11:50:26 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852626.510db45229388@swift.generated>
+Feb 03 11:50:30 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852630.510db4569e057@swift.generated>
+Feb 03 11:50:30 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852630.510db456cf14a@swift.generated>
+Feb 03 11:50:34 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852634.510db45ac509f@swift.generated>
+Feb 03 11:50:35 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852635.510db45b0205d@swift.generated>
+Feb 03 11:50:38 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852638.510db45ec3015@swift.generated>
+Feb 03 11:50:39 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852639.510db45f002af@swift.generated>
+Feb 03 11:50:43 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852643.510db46327290@swift.generated>
+Feb 03 11:50:43 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852643.510db46358d81@swift.generated>
+Feb 03 11:50:47 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852647.510db4677cb12@swift.generated>
+Feb 03 11:50:47 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852647.510db467aec6c@swift.generated>
+Feb 03 11:50:51 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852651.510db46b814d6@swift.generated>
+Feb 03 11:50:51 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852651.510db46bb643c@swift.generated>
+Feb 03 11:50:55 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852655.510db46f7966c@swift.generated>
+Feb 03 11:50:55 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852655.510db46faad0c@swift.generated>
+Feb 03 11:51:00 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852660.510db47430658@swift.generated>
+Feb 03 11:51:00 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852660.510db47462bfe@swift.generated>
+Feb 03 11:51:04 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852664.510db4782c777@swift.generated>
+Feb 03 11:51:04 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852664.510db4785efa7@swift.generated>
+Feb 03 11:51:08 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852668.510db47c2b359@swift.generated>
+Feb 03 11:51:08 [php                           ] : <E> fwrite(): send of 21 bytes failed with errno=32 Broken pipe (/Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Connection/AMQPConnection.php:165)
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(110): PhpAmqpLib\Connection\AMQPConnection->send_channel_method_frame()
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(476): PhpAmqpLib\Channel\AMQPChannel->send_method_frame()
+#2 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(90): PhpAmqpLib\Channel\AMQPChannel->basic_ack()
+#3 unknown(0): MailServiceCommand->myCallback()
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(572): call_user_func()
+#5 unknown(0): PhpAmqpLib\Channel\AMQPChannel->basic_deliver()
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func()
+#7 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(235): PhpAmqpLib\Channel\AMQPChannel->dispatch()
+#8 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(99): PhpAmqpLib\Channel\AMQPChannel->wait()
+#9 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(52): rabbitMQ->wait()
+#10 unknown(0): MailServiceCommand->actionStart()
+#11 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#12 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): MailServiceCommand->run()
+#13 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#14 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#15 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#16 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#17 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 11:51:41 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:51:41 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:51:41 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:51:41 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852701.510db49d8b29c@swift.generated>
+Feb 03 11:51:45 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852705.510db4a1de708@swift.generated>
+Feb 03 11:51:46 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852706.510db4a21c371@swift.generated>
+Feb 03 11:51:50 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852710.510db4a633812@swift.generated>
+Feb 03 11:51:50 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852710.510db4a665612@swift.generated>
+Feb 03 11:51:54 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852714.510db4aa6d5d5@swift.generated>
+Feb 03 11:51:54 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852714.510db4aa9ebd0@swift.generated>
+Feb 03 11:51:58 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852718.510db4ae8a37e@swift.generated>
+Feb 03 11:51:58 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852718.510db4aebaca3@swift.generated>
+Feb 03 11:52:03 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852723.510db4b3163e0@swift.generated>
+Feb 03 11:52:03 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852723.510db4b348dc1@swift.generated>
+Feb 03 11:52:07 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852727.510db4b76591b@swift.generated>
+Feb 03 11:52:07 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852727.510db4b797658@swift.generated>
+Feb 03 11:52:12 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852732.510db4bc16fa2@swift.generated>
+Feb 03 11:52:12 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852732.510db4bc47fb9@swift.generated>
+Feb 03 11:52:16 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852736.510db4c02f78f@swift.generated>
+Feb 03 11:52:16 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852736.510db4c0607c5@swift.generated>
+Feb 03 11:52:20 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852740.510db4c485d29@swift.generated>
+Feb 03 11:52:20 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852740.510db4c4b6c55@swift.generated>
+Feb 03 11:52:25 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852745.510db4c91f8fd@swift.generated>
+Feb 03 11:52:25 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852745.510db4c950d28@swift.generated>
+Feb 03 11:52:29 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852749.510db4cd830eb@swift.generated>
+Feb 03 11:52:29 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852749.510db4cdb633b@swift.generated>
+Feb 03 11:52:33 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852753.510db4d1cbd40@swift.generated>
+Feb 03 11:52:34 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852754.510db4d2088b9@swift.generated>
+Feb 03 11:52:38 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852758.510db4d637f87@swift.generated>
+Feb 03 11:52:38 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852758.510db4d6697d3@swift.generated>
+Feb 03 11:52:42 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852762.510db4daaf398@swift.generated>
+Feb 03 11:52:42 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852762.510db4dae056b@swift.generated>
+Feb 03 11:52:47 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852767.510db4df07e5d@swift.generated>
+Feb 03 11:52:47 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852767.510db4df39439@swift.generated>
+Feb 03 11:52:51 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852771.510db4e312bf0@swift.generated>
+Feb 03 11:52:51 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852771.510db4e3439ef@swift.generated>
+Feb 03 11:52:55 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852775.510db4e728cd2@swift.generated>
+Feb 03 11:52:55 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852775.510db4e759960@swift.generated>
+Feb 03 11:52:59 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852779.510db4eb41095@swift.generated>
+Feb 03 11:52:59 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852779.510db4eb72a80@swift.generated>
+Feb 03 11:53:03 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852783.510db4ef3ec9e@swift.generated>
+Feb 03 11:53:03 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852783.510db4ef727ee@swift.generated>
+Feb 03 11:53:07 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852787.510db4f3a5c24@swift.generated>
+Feb 03 11:53:07 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852787.510db4f3d6549@swift.generated>
+Feb 03 11:53:11 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852791.510db4f7a26bd@swift.generated>
+Feb 03 11:53:11 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852791.510db4f7d3459@swift.generated>
+Feb 03 11:53:16 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852796.510db4fc0872b@swift.generated>
+Feb 03 11:53:16 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852796.510db4fc7cbbe@swift.generated>
+Feb 03 11:53:21 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852801.510db50197322@swift.generated>
+Feb 03 11:53:21 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852801.510db501ca72d@swift.generated>
+Feb 03 11:53:25 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852805.510db505bcc40@swift.generated>
+Feb 03 11:53:25 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852805.510db505edca5@swift.generated>
+Feb 03 11:53:29 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852809.510db509caf83@swift.generated>
+Feb 03 11:53:30 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852810.510db50a07cd0@swift.generated>
+Feb 03 11:53:33 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852813.510db50dce5dc@swift.generated>
+Feb 03 11:53:34 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852814.510db50e0aa58@swift.generated>
+Feb 03 11:53:38 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852818.510db51252186@swift.generated>
+Feb 03 11:53:38 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852818.510db51282fb3@swift.generated>
+Feb 03 11:53:42 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852822.510db5164ff6d@swift.generated>
+Feb 03 11:53:42 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852822.510db51680beb@swift.generated>
+Feb 03 11:53:47 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852827.510db51b04d0f@swift.generated>
+Feb 03 11:53:47 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852827.510db51b35623@swift.generated>
+Feb 03 11:53:48 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:53:48 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:53:48 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:53:49 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852829.510db51d022b7@swift.generated>
+Feb 03 11:53:53 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852833.510db5219c27e@swift.generated>
+Feb 03 11:53:53 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852833.510db521cdc1b@swift.generated>
+Feb 03 11:53:58 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852838.510db526e87ae@swift.generated>
+Feb 03 11:53:59 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852839.510db52725a41@swift.generated>
+Feb 03 11:54:03 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852843.510db52b45e4a@swift.generated>
+Feb 03 11:54:03 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852843.510db52b76d74@swift.generated>
+Feb 03 11:54:07 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852847.510db52f89e11@swift.generated>
+Feb 03 11:54:07 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852847.510db52fbb2a4@swift.generated>
+Feb 03 11:54:11 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852851.510db533aa6e7@swift.generated>
+Feb 03 11:54:11 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852851.510db533e0f0f@swift.generated>
+Feb 03 11:54:15 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852855.510db537dd69f@swift.generated>
+Feb 03 11:54:16 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852856.510db53819995@swift.generated>
+Feb 03 11:54:20 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852860.510db53c67209@swift.generated>
+Feb 03 11:54:20 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852860.510db53c978af@swift.generated>
+Feb 03 11:54:24 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852864.510db54068647@swift.generated>
+Feb 03 11:54:24 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852864.510db5409a8da@swift.generated>
+Feb 03 11:54:28 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852868.510db5448a824@swift.generated>
+Feb 03 11:54:28 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852868.510db544bb68b@swift.generated>
+Feb 03 11:54:33 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852873.510db549074d9@swift.generated>
+Feb 03 11:54:33 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852873.510db54939060@swift.generated>
+Feb 03 11:54:37 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852877.510db54d7958a@swift.generated>
+Feb 03 11:54:37 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852877.510db54dabe7c@swift.generated>
+Feb 03 11:54:41 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852881.510db5519a165@swift.generated>
+Feb 03 11:54:41 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852881.510db551cbbc4@swift.generated>
+Feb 03 11:54:46 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852886.510db55605baa@swift.generated>
+Feb 03 11:54:46 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852886.510db55637041@swift.generated>
+Feb 03 11:54:50 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852890.510db55a99ce4@swift.generated>
+Feb 03 11:54:50 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852890.510db55aca9b0@swift.generated>
+Feb 03 11:54:55 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852895.510db55f37e2b@swift.generated>
+Feb 03 11:54:55 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852895.510db55f6a88c@swift.generated>
+Feb 03 11:54:59 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852899.510db56331bc6@swift.generated>
+Feb 03 11:54:59 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852899.510db56362617@swift.generated>
+Feb 03 11:55:03 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852903.510db5672ef25@swift.generated>
+Feb 03 11:55:03 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852903.510db56760328@swift.generated>
+Feb 03 11:55:07 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852907.510db56b21cf5@swift.generated>
+Feb 03 11:55:07 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852907.510db56b534e4@swift.generated>
+Feb 03 11:55:11 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852911.510db56f1591a@swift.generated>
+Feb 03 11:55:11 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852911.510db56f47084@swift.generated>
+Feb 03 11:55:15 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852915.510db5733881d@swift.generated>
+Feb 03 11:55:15 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359852915.510db5736bd55@swift.generated>
+Feb 03 11:55:19 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359852919.510db5776688f@swift.generated>
+Feb 03 11:56:08 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:56:08 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:56:08 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:56:55 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853015.510db5d7e8026@swift.generated>
+Feb 03 11:57:00 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853020.510db5dc7735f@swift.generated>
+Feb 03 11:57:44 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:57:44 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:57:44 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:58:07 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:58:07 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:58:07 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:58:12 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:58:12 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:58:12 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:58:42 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 11:58:42 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 11:58:42 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 11:58:48 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853128.510db6480eeb8@swift.generated>
+Feb 03 11:58:52 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853132.510db64c84330@swift.generated>
+Feb 03 12:00:59 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853259.510db6cbe45cb@swift.generated>
+Feb 03 12:01:04 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853264.510db6d0ae89c@swift.generated>
+Feb 03 12:02:00 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853320.510db708c22e6@swift.generated>
+Feb 03 12:02:05 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853325.510db70dcf198@swift.generated>
+Feb 03 12:02:11 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 12:02:11 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 12:02:11 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 12:02:14 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853334.510db716c21de@swift.generated>
+Feb 03 12:02:19 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853339.510db71b31c2f@swift.generated>
+Feb 03 12:02:19 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853339.510db71b63400@swift.generated>
+Feb 03 12:02:24 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853344.510db72043eaf@swift.generated>
+Feb 03 12:02:24 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853344.510db720752b3@swift.generated>
+Feb 03 12:02:28 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853348.510db72498cae@swift.generated>
+Feb 03 12:02:28 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359853348.510db724ca16a@swift.generated>
+Feb 03 12:02:35 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359853355.510db72b4b628@swift.generated>
+Feb 03 18:49:30 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:49:30 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:49:30 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:49:30 [exception.PhpAmqpLib\Exception\AMQPRuntimeException] : <E> exception 'PhpAmqpLib\Exception\AMQPRuntimeException' with message 'Error Connecting to server(61): Connection refused ' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Connection/AMQPConnection.php:82
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(45): PhpAmqpLib\Connection\AMQPConnection->__construct('localhost', '5672', 'mailServer', 'mail', '/')
+#1 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(47): rabbitMQ->createConnection()
+#2 [internal function]: MailServiceCommand->actionStart()
+#3 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#4 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#5 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#6 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#7 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#8 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#9 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#10 {main}
+---
+Feb 03 18:50:07 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:50:07 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:50:07 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:50:07 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:50:07 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:50:07 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:50:07 [exception.PhpAmqpLib\Exception\AMQPProtocolConnectionException] : <E> exception 'PhpAmqpLib\Exception\AMQPProtocolConnectionException' with message 'NOT_IMPLEMENTED - global=true' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Connection/AMQPConnection.php:384
+Stack trace:
+#0 [internal function]: PhpAmqpLib\Connection\AMQPConnection->connection_close(Object(PhpAmqpLib\Wire\AMQPReader))
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(89): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('10,50', Object(PhpAmqpLib\Wire\AMQPReader), NULL)
+#3 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Connection/AMQPConnection.php(311): PhpAmqpLib\Channel\AbstractChannel->wait()
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(105): PhpAmqpLib\Connection\AMQPConnection->wait_channel(1)
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(205): PhpAmqpLib\Channel\AbstractChannel->next_frame()
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(651): PhpAmqpLib\Channel\AbstractChannel->wait(Array)
+#7 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(89): PhpAmqpLib\Channel\AMQPChannel->basic_qos('1', '1', '1')
+#8 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(49): rabbitMQ->setQos('1', '1', '1')
+#9 [internal function]: MailServiceCommand->actionStart()
+#10 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#12 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#13 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#14 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#15 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#16 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#17 {main}
+---
+Feb 03 18:50:21 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:50:21 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:50:21 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:50:21 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:50:21 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:50:21 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:50:21 [exception.PhpAmqpLib\Exception\AMQPProtocolConnectionException] : <E> exception 'PhpAmqpLib\Exception\AMQPProtocolConnectionException' with message 'NOT_IMPLEMENTED - prefetch_size!=0 (1)' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Connection/AMQPConnection.php:384
+Stack trace:
+#0 [internal function]: PhpAmqpLib\Connection\AMQPConnection->connection_close(Object(PhpAmqpLib\Wire\AMQPReader))
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(89): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('10,50', Object(PhpAmqpLib\Wire\AMQPReader), NULL)
+#3 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Connection/AMQPConnection.php(311): PhpAmqpLib\Channel\AbstractChannel->wait()
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(105): PhpAmqpLib\Connection\AMQPConnection->wait_channel(1)
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(205): PhpAmqpLib\Channel\AbstractChannel->next_frame()
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(651): PhpAmqpLib\Channel\AbstractChannel->wait(Array)
+#7 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(89): PhpAmqpLib\Channel\AMQPChannel->basic_qos('1', '1', '0')
+#8 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(49): rabbitMQ->setQos('1', '1', '0')
+#9 [internal function]: MailServiceCommand->actionStart()
+#10 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#12 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#13 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#14 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#15 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#16 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#17 {main}
+---
+Feb 03 18:52:23 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:52:23 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:52:23 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:53:07 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:53:07 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:53:07 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:54:32 [exception.OutOfBoundsException] : <E> exception 'OutOfBoundsException' with message 'No 'content_type' property' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Wire/GenericContent.php:57
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(60): PhpAmqpLib\Wire\GenericContent->get('content_type')
+#1 [internal function]: MailServiceCommand->myCallback(Object(PhpAmqpLib\Message\AMQPMessage))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(572): call_user_func(Array, Object(PhpAmqpLib\Message\AMQPMessage))
+#3 [internal function]: PhpAmqpLib\Channel\AMQPChannel->basic_deliver(Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('60,60', Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AbstractChannel->wait()
+#7 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(53): rabbitMQ->wait()
+#8 [internal function]: MailServiceCommand->actionStart()
+#9 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#10 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#12 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#13 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#14 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#15 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#16 {main}
+---
+Feb 03 18:54:32 [exception.OutOfBoundsException] : <E> exception 'OutOfBoundsException' with message 'No 'content_type' property' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Wire/GenericContent.php:57
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(60): PhpAmqpLib\Wire\GenericContent->get('content_type')
+#1 [internal function]: MailServiceCommand->myCallback(Object(PhpAmqpLib\Message\AMQPMessage))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(572): call_user_func(Array, Object(PhpAmqpLib\Message\AMQPMessage))
+#3 [internal function]: PhpAmqpLib\Channel\AMQPChannel->basic_deliver(Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('60,60', Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AbstractChannel->wait()
+#7 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(53): rabbitMQ->wait()
+#8 [internal function]: MailServiceCommand->actionStart()
+#9 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#10 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#12 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#13 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#14 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#15 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#16 {main}
+---
+Feb 03 18:54:41 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:54:41 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:54:41 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:54:41 [exception.OutOfBoundsException] : <E> exception 'OutOfBoundsException' with message 'No 'content_type' property' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Wire/GenericContent.php:57
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(60): PhpAmqpLib\Wire\GenericContent->get('content_type')
+#1 [internal function]: MailServiceCommand->myCallback(Object(PhpAmqpLib\Message\AMQPMessage))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(572): call_user_func(Array, Object(PhpAmqpLib\Message\AMQPMessage))
+#3 [internal function]: PhpAmqpLib\Channel\AMQPChannel->basic_deliver(Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('60,60', Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AbstractChannel->wait()
+#7 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(53): rabbitMQ->wait()
+#8 [internal function]: MailServiceCommand->actionStart()
+#9 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#10 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#12 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#13 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#14 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#15 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#16 {main}
+---
+Feb 03 18:54:51 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:54:51 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:54:51 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:54:53 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:54:53 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:54:53 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:54:55 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359878095.510e17cfb3d5f@swift.generated>
+Feb 03 18:54:58 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359878098.510e17d23c7b5@swift.generated>
+Feb 03 18:55:00 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359878100.510e17d4c4497@swift.generated>
+Feb 03 18:55:02 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359878102.510e17d63aab6@swift.generated>
+Feb 03 18:56:51 [application                   ] : <I> [MailServiceCommand] - Initialising Mail Service....
+Feb 03 18:56:51 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:56:51 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:57:18 [application                   ] : <I> [MailServiceCommand] - 510e185edc42a8.40225639 Initialising Mail Service....
+Feb 03 18:57:18 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:57:18 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:57:38 [application                   ] : <I> [MailServiceCommand] - a510e18724a6ca2.47269990 Initialising Mail Service....
+Feb 03 18:57:38 [application                   ] : <I> [MailServiceCommand] - Starting Mail Service....
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:57:38 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:59:19 [application                   ] : <I> [MailServiceCommand] 510e18d79cdc08.69631384 - Initialising Mail Service....
+Feb 03 18:59:19 [application                   ] : <I> [MailServiceCommand] 510e18d79cdc08.69631384 - Starting Mail Service....
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:59:19 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 18:59:31 [application                   ] : <I> [MailServiceCommand] 510e18e3aab387.95399462 - Initialising Mail Service....
+Feb 03 18:59:31 [application                   ] : <I> [MailServiceCommand] 510e18e3aab387.95399462 - Starting Mail Service....
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 18:59:31 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:02:33 [application                   ] : <I> [MailServiceCommand] -510e1999796f34.60225593 - Initialising Mail Service....
+Feb 03 19:02:33 [application                   ] : <I> [MailServiceCommand] 510e1999796f34.60225593 - Starting Mail Service....
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:02:33 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:02:33 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359878553.510e1999806b9@swift.generated>
+Feb 03 19:02:38 [application                   ] : <I> [MailServiceCommand] -510e199e6cf2b2.95814657 - Initialising Mail Service....
+Feb 03 19:02:38 [application                   ] : <I> [MailServiceCommand] 510e199e6cf2b2.95814657 - Starting Mail Service....
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:02:38 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:02:38 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359878558.510e199ed4cd0@swift.generated>
+Feb 03 19:04:43 [application                   ] : <I> [MailServiceCommand] -510e1a1b8f77f8.80201848 - Initialising Mail Service....
+Feb 03 19:04:43 [application                   ] : <I> [MailServiceCommand] 510e1a1b8f77f8.80201848 - Starting Mail Service....
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:04:43 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:04:50 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359878690.510e1a224d7f1@swift.generated>
+Feb 03 19:04:54 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359878694.510e1a26a9e34@swift.generated>
+Feb 03 19:04:54 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359878694.510e1a26db803@swift.generated>
+Feb 03 19:04:59 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359878699.510e1a2b51416@swift.generated>
+Feb 03 19:08:59 [application                   ] : <I> [MailServiceCommand] -510e1b1b9daa31.53179744 - Initialising Mail Service....
+Feb 03 19:08:59 [application                   ] : <I> [MailServiceCommand] 510e1b1b9daa31.53179744 - Starting Mail Service....
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:08:59 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:09:12 [application                   ] : <I> [MailServiceCommand] -510e1b28423603.77401284 - Initialising Mail Service....
+Feb 03 19:09:12 [application                   ] : <I> [MailServiceCommand] 510e1b28423603.77401284 - Starting Mail Service....
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:09:12 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:09:12 [exception.CException          ] : <E> exception 'CException' with message 'Property "MailServiceCommand.id" is not defined.' in /Users/marct/www/dev/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(117): CComponent->__get('id')
+#1 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(53): rabbitMQ->registerCallback(Array)
+#2 [internal function]: MailServiceCommand->actionStart()
+#3 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#4 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#5 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#6 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#7 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#8 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#9 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#10 {main}
+---
+Feb 03 19:09:30 [application                   ] : <I> [MailServiceCommand] -510e1b3a8c57f0.29072347 - Initialising Mail Service....
+Feb 03 19:09:30 [application                   ] : <I> [MailServiceCommand] 510e1b3a8c57f0.29072347 - Starting Mail Service....
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:09:30 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:10:42 [application                   ] : <I> [MailServiceCommand] -510e1b82161cf0.87675240 - Initialising Mail Service....
+Feb 03 19:10:42 [application                   ] : <I> [MailServiceCommand] 510e1b82161cf0.87675240 - Starting Mail Service....
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:10:42 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:11:10 [application                   ] : <I> [MailServiceCommand] -510e1b9e9002c9.67437832 - Initialising Mail Service....
+Feb 03 19:11:10 [application                   ] : <I> [MailServiceCommand] 510e1b9e9002c9.67437832 - Starting Mail Service....
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:11:10 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:11:15 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879075.510e1ba3a934e@swift.generated>
+Feb 03 19:11:17 [php                           ] : <E> Missing argument 2 for MailServiceCommand::myCallback() (/Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php:57)
+Stack trace:
+#0 unknown(0): PhpAmqpLib\Channel\AMQPChannel->basic_deliver()
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func()
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AMQPChannel->dispatch()
+#3 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AMQPChannel->wait()
+#4 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(54): rabbitMQ->wait()
+#5 unknown(0): MailServiceCommand->actionStart()
+#6 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#7 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): MailServiceCommand->run()
+#8 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#9 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#11 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#12 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 19:11:20 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879080.510e1ba884a36@swift.generated>
+Feb 03 19:11:20 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879080.510e1ba8b61b3@swift.generated>
+Feb 03 19:11:24 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879084.510e1bace76b1@swift.generated>
+Feb 03 19:11:41 [application                   ] : <I> [MailServiceCommand] -510e1bbddd2ed8.90327271 - Initialising Mail Service....
+Feb 03 19:11:41 [application                   ] : <I> [MailServiceCommand] 510e1bbddd2ed8.90327271 - Starting Mail Service....
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:11:41 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:11:44 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879104.510e1bc0eec8b@swift.generated>
+Feb 03 19:11:49 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879109.510e1bc551c99@swift.generated>
+Feb 03 19:11:49 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879109.510e1bc5825c1@swift.generated>
+Feb 03 19:11:53 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879113.510e1bc97f574@swift.generated>
+Feb 03 19:12:58 [application                   ] : <I> [MailServiceCommand] -510e1c0a452a32.34116814 - Initialising Mail Service....
+Feb 03 19:12:58 [application                   ] : <I> [MailServiceCommand] 510e1c0a452a32.34116814 - Starting Mail Service....
+Feb 03 19:12:58 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:12:58 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:12:58 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:12:58 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:12:58 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:12:58 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:13:02 [application                   ] : <I> [MailServiceCommand] -510e1c0e56df58.86610368 - Initialising Mail Service....
+Feb 03 19:13:02 [application                   ] : <I> [MailServiceCommand] 510e1c0e56df58.86610368 - Starting Mail Service....
+Feb 03 19:13:02 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:13:02 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:13:02 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:13:02 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:13:02 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:13:02 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:13:11 [application                   ] : <I> [MailServiceCommand] -510e1c17c74ac5.68301657 - Initialising Mail Service....
+Feb 03 19:13:11 [application                   ] : <I> [MailServiceCommand] 510e1c17c74ac5.68301657 - Starting Mail Service....
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:13:11 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:13:16 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879196.510e1c1c859a2@swift.generated>
+Feb 03 19:13:21 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879201.510e1c2143003@swift.generated>
+Feb 03 19:13:21 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879201.510e1c2174aaf@swift.generated>
+Feb 03 19:13:26 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879206.510e1c262e550@swift.generated>
+Feb 03 19:13:38 [application                   ] : <I> [MailServiceCommand] -510e1c32cba2d8.33590049 - Initialising Mail Service....
+Feb 03 19:13:38 [application                   ] : <I> [MailServiceCommand] 510e1c32cba2d8.33590049 - Starting Mail Service....
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:13:38 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:13:41 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879221.510e1c354f71c@swift.generated>
+Feb 03 19:13:42 [php                           ] : <E> Missing argument 2 for MailServiceCommand::myCallback() (/Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php:57)
+Stack trace:
+#0 unknown(0): PhpAmqpLib\Channel\AMQPChannel->basic_deliver()
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func()
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AMQPChannel->dispatch()
+#3 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AMQPChannel->wait()
+#4 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(54): rabbitMQ->wait()
+#5 unknown(0): MailServiceCommand->actionStart()
+#6 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#7 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): MailServiceCommand->run()
+#8 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#9 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#11 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#12 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 19:13:45 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879225.510e1c39b547e@swift.generated>
+Feb 03 19:13:45 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879225.510e1c39ebbe5@swift.generated>
+Feb 03 19:13:50 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879230.510e1c3e2c51f@swift.generated>
+Feb 03 19:14:27 [application                   ] : <I> [MailServiceCommand] -510e1c63f408c7.88634017 - Initialising Mail Service....
+Feb 03 19:14:28 [application                   ] : <I> [MailServiceCommand] 510e1c63f408c7.88634017 - Starting Mail Service....
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:14:28 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:14:29 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879269.510e1c657988a@swift.generated>
+Feb 03 19:14:31 [php                           ] : <E> Missing argument 2 for MailServiceCommand::myCallback() (/Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php:57)
+Stack trace:
+#0 unknown(0): PhpAmqpLib\Channel\AMQPChannel->basic_deliver()
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func()
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AMQPChannel->dispatch()
+#3 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AMQPChannel->wait()
+#4 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(54): rabbitMQ->wait()
+#5 unknown(0): MailServiceCommand->actionStart()
+#6 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#7 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): MailServiceCommand->run()
+#8 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#9 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#11 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#12 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 19:14:34 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879274.510e1c6a13eb5@swift.generated>
+Feb 03 19:14:34 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359879274.510e1c6a47fa6@swift.generated>
+Feb 03 19:14:40 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359879280.510e1c70eb217@swift.generated>
+Feb 03 19:15:24 [application                   ] : <I> [MailServiceCommand] -510e1c9c64feb3.15458538 - Initialising Mail Service....
+Feb 03 19:15:24 [application                   ] : <I> [MailServiceCommand] 510e1c9c64feb3.15458538 - Starting Mail Service....
+Feb 03 19:15:24 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:15:24 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:15:24 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:15:24 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:15:24 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:15:24 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:15:24 [php                           ] : <E> Undefined variable: __this (/Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php:53)
+Stack trace:
+#0 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): MailServiceCommand->run()
+#1 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#4 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#5 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 19:15:47 [application                   ] : <I> [MailServiceCommand] -510e1cb304c7d8.27267668 - Initialising Mail Service....
+Feb 03 19:15:47 [application                   ] : <I> [MailServiceCommand] 510e1cb304c7d8.27267668 - Starting Mail Service....
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:15:47 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:16:56 [application                   ] : <I> [MailServiceCommand] -510e1cf8d68a49.11285699 - Initialising Mail Service....
+Feb 03 19:16:56 [application                   ] : <I> [MailServiceCommand] 510e1cf8d68a49.11285699 - Starting Mail Service....
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:16:56 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:16:56 [exception.CException          ] : <E> exception 'CException' with message 'rabbitMQ and its behaviors do not have a method or closure named "callback".' in /Users/marct/www/dev/framework/base/CComponent.php:265
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(99): CComponent->__call('callback', Array)
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(99): rabbitMQ->callback('myCallback')
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(116): rabbitMQ->consume()
+#3 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(53): rabbitMQ->registerCallback(Array)
+#4 [internal function]: MailServiceCommand->actionStart()
+#5 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#6 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#7 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#8 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#9 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#10 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#11 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#12 {main}
+---
+Feb 03 19:17:08 [application                   ] : <I> [MailServiceCommand] -510e1d04a67b13.11916565 - Initialising Mail Service....
+Feb 03 19:17:08 [application                   ] : <I> [MailServiceCommand] 510e1d04a67b13.11916565 - Starting Mail Service....
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:17:08 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:33:03 [application                   ] : <I> [MailServiceCommand] -510e20bf6b4115.99014255 - Initialising Mail Service....
+Feb 03 19:33:03 [application                   ] : <I> [MailServiceCommand] 510e20bf6b4115.99014255 - Starting Mail Service....
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:33:03 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:33:31 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880411.510e20db01e10@swift.generated>
+Feb 03 19:33:35 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880415.510e20dfe64c2@swift.generated>
+Feb 03 19:33:36 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880416.510e20e023170@swift.generated>
+Feb 03 19:33:40 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880420.510e20e43c8b6@swift.generated>
+Feb 03 19:34:11 [application                   ] : <I> [MailServiceCommand] -510e2103300b20.19834329 - Initialising Mail Service....
+Feb 03 19:34:11 [application                   ] : <I> [MailServiceCommand] 510e2103300b20.19834329 - Starting Mail Service....
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:34:11 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:34:23 [application                   ] : <I> [MailServiceCommand] -510e210f5ef2a3.08583721 - Initialising Mail Service....
+Feb 03 19:34:23 [application                   ] : <I> [MailServiceCommand] 510e210f5ef2a3.08583721 - Starting Mail Service....
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:34:23 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:34:26 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880466.510e2112f0c5a@swift.generated>
+Feb 03 19:34:27 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880467.510e2113f21ea@swift.generated>
+Feb 03 19:34:31 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880471.510e2117838db@swift.generated>
+Feb 03 19:34:32 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880472.510e2118bd436@swift.generated>
+Feb 03 19:35:47 [application                   ] : <I> [MailServiceCommand] -510e216355db06.82876938 - Initialising Mail Service....
+Feb 03 19:35:47 [application                   ] : <I> [MailServiceCommand] 510e216355db06.82876938 - Starting Mail Service....
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:35:47 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:35:56 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880556.510e216cb2d8f@swift.generated>
+Feb 03 19:35:57 [php                           ] : <E> Missing argument 2 for MailServiceCommand::myCallback() (/Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php:57)
+Stack trace:
+#0 unknown(0): PhpAmqpLib\Channel\AMQPChannel->basic_deliver()
+#1 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func()
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AMQPChannel->dispatch()
+#3 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AMQPChannel->wait()
+#4 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(54): rabbitMQ->wait()
+#5 unknown(0): MailServiceCommand->actionStart()
+#6 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#7 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): MailServiceCommand->run()
+#8 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#9 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Users/marct/www/dev/framework/yiic.php(33): CConsoleApplication->run()
+#11 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once()
+#12 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once()
+
+Feb 03 19:36:01 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880561.510e217130c06@swift.generated>
+Feb 03 19:36:01 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880561.510e217162301@swift.generated>
+Feb 03 19:36:05 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880565.510e2175d1923@swift.generated>
+Feb 03 19:36:28 [application                   ] : <I> [MailServiceCommand] -510e218c0109a9.72747751 - Initialising Mail Service....
+Feb 03 19:36:28 [application                   ] : <I> [MailServiceCommand] 510e218c0109a9.72747751 - Starting Mail Service....
+Feb 03 19:36:28 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:36:28 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:36:28 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:36:28 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:36:28 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:36:28 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:39:22 [application                   ] : <I> [MailServiceCommand] -510e223a3ef463.47184482 - Initialising Mail Service....
+Feb 03 19:39:22 [application                   ] : <I> [MailServiceCommand] 510e223a3ef463.47184482 - Starting Mail Service....
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:39:22 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:40:03 [application                   ] : <I> [MailServiceCommand] -510e2263890005.69598682 - Initialising Mail Service....
+Feb 03 19:40:03 [application                   ] : <I> [MailServiceCommand] 510e2263890005.69598682 - Starting Mail Service....
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:40:03 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:40:09 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880809.510e226930e6d@swift.generated>
+Feb 03 19:40:14 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880814.510e226e13310@swift.generated>
+Feb 03 19:40:18 [application                   ] : <I> [MailServiceCommand] -510e2272928290.15243759 - Initialising Mail Service....
+Feb 03 19:40:18 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880818.510e22729622f@swift.generated>
+Feb 03 19:40:23 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880823.510e2277b7e6c@swift.generated>
+Feb 03 19:40:29 [application                   ] : <I> [MailServiceCommand] -510e227d791765.92355654 - Initialising Mail Service....
+Feb 03 19:40:29 [application                   ] : <I> [MailServiceCommand] 510e227d791765.92355654 - Starting Mail Service....
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:40:29 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:40:33 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880833.510e228118baa@swift.generated>
+Feb 03 19:40:36 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880836.510e2284eb878@swift.generated>
+Feb 03 19:40:40 [application                   ] : <I> [MailServiceCommand] -510e22883e28f3.44798486 - Initialising Mail Service....
+Feb 03 19:40:40 [application                   ] : <I> [MailServiceCommand] Mail queued - Message-ID: <1359880840.510e2288418eb@swift.generated>
+Feb 03 19:40:46 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880846.510e228e7b270@swift.generated>
+Feb 03 19:42:15 [application                   ] : <I> [MailServiceCommand] -510e22e7044af4.24055545 - Initialising Mail Service....
+Feb 03 19:42:15 [application                   ] : <I> [MailServiceCommand] 510e22e7044af4.24055545 - Starting Mail Service....
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:42:15 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:42:18 [application                   ] : <I> [MailServiceCommand] -510e22ea7a9de3.25311798 - Initialising Mail Service....
+Feb 03 19:42:18 [application                   ] : <I> [MailServiceCommand - 510e22ea7a9de3.25311798] Mail queued - Message-ID: <1359880938.510e22ea7fc9b@swift.generated>
+Feb 03 19:42:22 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359880942.510e22eec2d49@swift.generated>
+Feb 03 19:45:30 [application                   ] : <I> [MailServiceCommand] -934cd - Initialising Mail Service....
+Feb 03 19:45:30 [application                   ] : <I> [MailServiceCommand] 934cd - Starting Mail Service....
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:45:30 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:45:36 [application                   ] : <I> [MailServiceCommand] -ff30e - Initialising Mail Service....
+Feb 03 19:45:36 [application                   ] : <I> [MailServiceCommand - ff30e] Mail queued - Message-ID: <1359881136.510e23b055280@swift.generated>
+Feb 03 19:45:42 [application                   ] : <I> [MailServiceCommand] Message sent - Message-ID: <1359881142.510e23b680890@swift.generated>
+Feb 03 19:47:16 [application                   ] : <I> [MailServiceCommand] [75428] Initialising Mail Service....
+Feb 03 19:47:16 [application                   ] : <I> [MailServiceCommand] [75428] Starting Mail Service....
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:47:16 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:47:27 [application                   ] : <I> [MailServiceCommand] [b8753] Initialising Mail Service....
+Feb 03 19:47:27 [application                   ] : <I> [MailServiceCommand - b8753] Mail queued - Message-ID: <1359881247.510e241fa0678@swift.generated>
+Feb 03 19:47:31 [application                   ] : <I> [MailServiceCommand] [b8753 Message sent - Message-ID: <1359881251.510e2423de2d5@swift.generated>
+Feb 03 19:48:06 [application                   ] : <I> [MailServiceCommand] [49e43] Initialising Mail Service....
+Feb 03 19:48:06 [application                   ] : <I> [MailServiceCommand] [49e43] Starting Mail Service....
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:48:06 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:48:08 [application                   ] : <I> [MailServiceCommand] [1b1d0] Initialising Mail Service....
+Feb 03 19:48:08 [application                   ] : <I> [MailServiceCommand] [ 1b1d0] Mail queued - Message-ID: <1359881288.510e2448b92bb@swift.generated>
+Feb 03 19:48:13 [application                   ] : <I> [MailServiceCommand] [1b1d0] Message sent - Message-ID: <1359881293.510e244d2fac0@swift.generated>
+Feb 03 19:48:46 [application                   ] : <I> [MailServiceCommand] [#513f9] Initialising Mail Service....
+Feb 03 19:48:46 [application                   ] : <I> [MailServiceCommand] [#513f9] Starting Mail Service....
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:48:46 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:48:55 [application                   ] : <I> [MailServiceCommand] [#b644f] Initialising Mail Service....
+Feb 03 19:48:55 [application                   ] : <I> [MailServiceCommand] [#b644f] Starting Mail Service....
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:48:55 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:49:07 [application                   ] : <I> [MailServiceCommand] [#039a9] Initialising Mail Service....
+Feb 03 19:49:07 [application                   ] : <I> [MailServiceCommand] [#039a9] Mail queued - Message-ID: <1359881347.510e24831db93@swift.generated>
+Feb 03 19:49:08 [application                   ] : <I> [MailServiceCommand] [#0ca42] Initialising Mail Service....
+Feb 03 19:49:08 [application                   ] : <I> [MailServiceCommand] [#0ca42] Mail queued - Message-ID: <1359881348.510e248479261@swift.generated>
+Feb 03 19:49:11 [application                   ] : <I> [MailServiceCommand] [#039a9] Message sent - Message-ID: <1359881351.510e24878ad34@swift.generated>
+Feb 03 19:49:11 [application                   ] : <I> [MailServiceCommand] [#039a9] Mail queued - Message-ID: <1359881351.510e2487bb6ab@swift.generated>
+Feb 03 19:49:12 [application                   ] : <I> [MailServiceCommand] [#0ca42] Message sent - Message-ID: <1359881352.510e2488aba96@swift.generated>
+Feb 03 19:49:14 [application                   ] : <I> [MailServiceCommand] [#0ca42] Mail queued - Message-ID: <1359881354.510e248a67b61@swift.generated>
+Feb 03 19:49:16 [application                   ] : <I> [MailServiceCommand] [#039a9] Message sent - Message-ID: <1359881356.510e248c93056@swift.generated>
+Feb 03 19:49:16 [application                   ] : <I> [MailServiceCommand] [#039a9] Mail queued - Message-ID: <1359881356.510e248cc60b5@swift.generated>
+Feb 03 19:49:19 [application                   ] : <I> [MailServiceCommand] [#0ca42] Message sent - Message-ID: <1359881359.510e248f325c9@swift.generated>
+Feb 03 19:49:22 [application                   ] : <I> [MailServiceCommand] [#039a9] Message sent - Message-ID: <1359881362.510e2492201bc@swift.generated>
+Feb 03 19:50:06 [application                   ] : <I> [MailServiceCommand] [#78fb7] Initialising Mail Service....
+Feb 03 19:50:06 [application                   ] : <I> [MailServiceCommand] [#78fb7] Starting Mail Service....
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:50:06 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:50:09 [application                   ] : <I> [MailServiceCommand] [#13a10] Initialising Mail Service....
+Feb 03 19:50:09 [application                   ] : <I> [MailServiceCommand] [#13a10] Starting Mail Service....
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:50:09 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:50:12 [application                   ] : <I> [MailServiceCommand] [#ef82f] Initialising Mail Service....
+Feb 03 19:50:12 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881412.510e24c42bc7c@swift.generated>
+Feb 03 19:50:17 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881417.510e24c9696e3@swift.generated>
+Feb 03 19:50:36 [application                   ] : <I> [MailServiceCommand] [#bd467] Initialising Mail Service....
+Feb 03 19:50:36 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881436.510e24dc90757@swift.generated>
+Feb 03 19:50:38 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881438.510e24de19a6a@swift.generated>
+Feb 03 19:50:40 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881440.510e24e072630@swift.generated>
+Feb 03 19:50:40 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881440.510e24e0a4f10@swift.generated>
+Feb 03 19:50:41 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881441.510e24e1eab6a@swift.generated>
+Feb 03 19:50:42 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881442.510e24e22abca@swift.generated>
+Feb 03 19:50:44 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881444.510e24e48b311@swift.generated>
+Feb 03 19:50:44 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881444.510e24e4bc02a@swift.generated>
+Feb 03 19:50:46 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881446.510e24e67c3fc@swift.generated>
+Feb 03 19:50:46 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881446.510e24e6aed77@swift.generated>
+Feb 03 19:50:49 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881449.510e24e9aacd2@swift.generated>
+Feb 03 19:50:49 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881449.510e24e9dc39d@swift.generated>
+Feb 03 19:50:50 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881450.510e24eae0cba@swift.generated>
+Feb 03 19:50:51 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881451.510e24eb1f3f4@swift.generated>
+Feb 03 19:50:53 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881453.510e24edc9c03@swift.generated>
+Feb 03 19:50:54 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881454.510e24ee07361@swift.generated>
+Feb 03 19:50:56 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881456.510e24f02b176@swift.generated>
+Feb 03 19:50:56 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881456.510e24f05ce1a@swift.generated>
+Feb 03 19:50:58 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881458.510e24f237006@swift.generated>
+Feb 03 19:50:58 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881458.510e24f26ab93@swift.generated>
+Feb 03 19:51:00 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881460.510e24f45722d@swift.generated>
+Feb 03 19:51:00 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881460.510e24f488762@swift.generated>
+Feb 03 19:51:02 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881462.510e24f652363@swift.generated>
+Feb 03 19:51:02 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881462.510e24f685152@swift.generated>
+Feb 03 19:51:05 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881465.510e24f90af8c@swift.generated>
+Feb 03 19:51:05 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881465.510e24f93eaf7@swift.generated>
+Feb 03 19:51:07 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881467.510e24fbaaeb7@swift.generated>
+Feb 03 19:51:07 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881467.510e24fbdbf02@swift.generated>
+Feb 03 19:51:09 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881469.510e24fdcc5ac@swift.generated>
+Feb 03 19:51:10 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881470.510e24fe0e3c3@swift.generated>
+Feb 03 19:51:11 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881471.510e24ffc6013@swift.generated>
+Feb 03 19:51:12 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881472.510e250004bbc@swift.generated>
+Feb 03 19:51:13 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881473.510e2501e7cea@swift.generated>
+Feb 03 19:51:14 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881474.510e250225450@swift.generated>
+Feb 03 19:51:16 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881476.510e2504519f6@swift.generated>
+Feb 03 19:51:16 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881476.510e2504840b2@swift.generated>
+Feb 03 19:51:19 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881479.510e250746e11@swift.generated>
+Feb 03 19:51:19 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881479.510e25077808f@swift.generated>
+Feb 03 19:51:20 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881480.510e2508d0e3f@swift.generated>
+Feb 03 19:51:21 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881481.510e25090eb72@swift.generated>
+Feb 03 19:51:23 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881483.510e250b96c14@swift.generated>
+Feb 03 19:51:23 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881483.510e250bc84cf@swift.generated>
+Feb 03 19:51:24 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881484.510e250ce067f@swift.generated>
+Feb 03 19:51:25 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881485.510e250d1e94e@swift.generated>
+Feb 03 19:51:27 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881487.510e250fbe071@swift.generated>
+Feb 03 19:51:27 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881487.510e250feee9d@swift.generated>
+Feb 03 19:51:29 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881489.510e251193da9@swift.generated>
+Feb 03 19:51:29 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881489.510e2511c5698@swift.generated>
+Feb 03 19:51:31 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881491.510e2513ca5a7@swift.generated>
+Feb 03 19:51:32 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881492.510e251409413@swift.generated>
+Feb 03 19:51:33 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881493.510e2515a0bac@swift.generated>
+Feb 03 19:51:33 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881493.510e2515d1625@swift.generated>
+Feb 03 19:51:35 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881495.510e2517eb043@swift.generated>
+Feb 03 19:51:36 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881496.510e25182bc4b@swift.generated>
+Feb 03 19:51:37 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881497.510e2519cca96@swift.generated>
+Feb 03 19:51:38 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881498.510e251a0f91e@swift.generated>
+Feb 03 19:51:40 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881500.510e251cb557c@swift.generated>
+Feb 03 19:51:40 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881500.510e251ce99be@swift.generated>
+Feb 03 19:51:42 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881502.510e251e57edb@swift.generated>
+Feb 03 19:51:42 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881502.510e251e8ae51@swift.generated>
+Feb 03 19:51:44 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881504.510e2520edc85@swift.generated>
+Feb 03 19:51:45 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881505.510e25212c146@swift.generated>
+Feb 03 19:51:47 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881507.510e2523435e8@swift.generated>
+Feb 03 19:51:47 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881507.510e252374cd6@swift.generated>
+Feb 03 19:51:49 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881509.510e2525522e3@swift.generated>
+Feb 03 19:51:49 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881509.510e252583c99@swift.generated>
+Feb 03 19:51:52 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881512.510e252875247@swift.generated>
+Feb 03 19:51:52 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881512.510e2528a7691@swift.generated>
+Feb 03 19:51:54 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881514.510e252a6ef3a@swift.generated>
+Feb 03 19:51:54 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881514.510e252aa0638@swift.generated>
+Feb 03 19:51:56 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881516.510e252ce8d38@swift.generated>
+Feb 03 19:51:57 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881517.510e252d27ab6@swift.generated>
+Feb 03 19:51:58 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881518.510e252e7d0f5@swift.generated>
+Feb 03 19:51:58 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881518.510e252eaee27@swift.generated>
+Feb 03 19:52:01 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881521.510e25310d0e5@swift.generated>
+Feb 03 19:52:01 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881521.510e25313e7a8@swift.generated>
+Feb 03 19:52:02 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881522.510e2532e5247@swift.generated>
+Feb 03 19:52:03 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881523.510e253324bb3@swift.generated>
+Feb 03 19:52:05 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881525.510e2535c6a05@swift.generated>
+Feb 03 19:52:06 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881526.510e253604111@swift.generated>
+Feb 03 19:52:08 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881528.510e253807cc3@swift.generated>
+Feb 03 19:52:08 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881528.510e253839e4d@swift.generated>
+Feb 03 19:52:10 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881530.510e253a0faa7@swift.generated>
+Feb 03 19:52:10 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881530.510e253a4140b@swift.generated>
+Feb 03 19:52:12 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881532.510e253c214cb@swift.generated>
+Feb 03 19:52:12 [application                   ] : <I> [MailServiceCommand] [#ef82f] Mail queued -  Message-ID: <1359881532.510e253c536b0@swift.generated>
+Feb 03 19:52:14 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881534.510e253e658b8@swift.generated>
+Feb 03 19:52:14 [application                   ] : <I> [MailServiceCommand] [#bd467] Mail queued -  Message-ID: <1359881534.510e253e9b1d0@swift.generated>
+Feb 03 19:52:16 [application                   ] : <I> [MailServiceCommand] [#ef82f] Message sent - Message-ID: <1359881536.510e2540e8966@swift.generated>
+Feb 03 19:52:18 [application                   ] : <I> [MailServiceCommand] [#bd467] Message sent - Message-ID: <1359881538.510e25427ce85@swift.generated>
+Feb 03 19:53:08 [application                   ] : <I> [MailServiceCommand] [#2ac6d] Initialising Mail Service....
+Feb 03 19:53:08 [application                   ] : <I> [MailServiceCommand] [#2ac6d] Starting Mail Service....
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:53:08 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:53:10 [application                   ] : <I> [MailServiceCommand] [#0730c] Initialising Mail Service....
+Feb 03 19:53:10 [application                   ] : <I> [MailServiceCommand] [#0730c] Starting Mail Service....
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:53:10 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:53:18 [application                   ] : <I> [MailServiceCommand] [#1b875] Initialising Mail Service....
+Feb 03 19:53:18 [application                   ] : <I> [MailServiceCommand] [#1b875] Mail queued -  Message-ID: <1359881598.510e257e9911d@swift.generated>
+Feb 03 19:53:19 [application                   ] : <I> [MailServiceCommand] [#91b08] Initialising Mail Service....
+Feb 03 19:53:19 [application                   ] : <I> [MailServiceCommand] [#91b08] Mail queued -  Message-ID: <1359881599.510e257ff080b@swift.generated>
+Feb 03 19:53:22 [application                   ] : <I> [MailServiceCommand] [#1b875] Message sent - Message-ID: <1359881602.510e2582b4a82@swift.generated>
+Feb 03 19:53:22 [application                   ] : <I> [MailServiceCommand] [#1b875] Mail queued -  Message-ID: <1359881602.510e2582e5dc4@swift.generated>
+Feb 03 19:53:24 [application                   ] : <I> [MailServiceCommand] [#91b08] Message sent - Message-ID: <1359881604.510e25843664b@swift.generated>
+Feb 03 19:53:24 [application                   ] : <I> [MailServiceCommand] [#91b08] Mail queued -  Message-ID: <1359881604.510e2584681a8@swift.generated>
+Feb 03 19:53:27 [application                   ] : <I> [MailServiceCommand] [#1b875] Message sent - Message-ID: <1359881607.510e25872c8cd@swift.generated>
+Feb 03 19:53:27 [application                   ] : <I> [MailServiceCommand] [#1b875] Mail queued -  Message-ID: <1359881607.510e2587abe1a@swift.generated>
+Feb 03 19:53:29 [application                   ] : <I> [MailServiceCommand] [#91b08] Message sent - Message-ID: <1359881609.510e258930941@swift.generated>
+Feb 03 19:53:31 [application                   ] : <I> [MailServiceCommand] [#1b875] Message sent - Message-ID: <1359881611.510e258b928c4@swift.generated>
+Feb 03 19:55:14 [application                   ] : <I> [MailServiceCommand] [#e18c2] Initialising Mail Service....
+Feb 03 19:55:14 [application                   ] : <I> [MailServiceCommand] [#e18c2] Starting Mail Service....
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:55:14 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:55:19 [application                   ] : <I> [MailServiceCommand] [#6bbd8] Initialising Mail Service....
+Feb 03 19:55:19 [exception.OutOfBoundsException] : <E> exception 'OutOfBoundsException' with message 'No 'content_type' property' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Wire/GenericContent.php:57
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(90): PhpAmqpLib\Wire\GenericContent->get('content_type')
+#1 [internal function]: MailServiceCommand->myCallback(Object(PhpAmqpLib\Message\AMQPMessage))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(572): call_user_func(Array, Object(PhpAmqpLib\Message\AMQPMessage))
+#3 [internal function]: PhpAmqpLib\Channel\AMQPChannel->basic_deliver(Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('60,60', Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AbstractChannel->wait()
+#7 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(65): rabbitMQ->wait()
+#8 [internal function]: MailServiceCommand->actionStart()
+#9 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#10 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#12 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#13 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#14 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#15 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#16 {main}
+---
+Feb 03 19:55:39 [application                   ] : <I> [MailServiceCommand] [#bf86e] Initialising Mail Service....
+Feb 03 19:55:39 [application                   ] : <I> [MailServiceCommand] [#bf86e] Starting Mail Service....
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:55:39 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:55:39 [application                   ] : <I> [MailServiceCommand] [#ab311] Initialising Mail Service....
+Feb 03 19:55:39 [exception.OutOfBoundsException] : <E> exception 'OutOfBoundsException' with message 'No 'content_type' property' in /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Wire/GenericContent.php:57
+Stack trace:
+#0 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(90): PhpAmqpLib\Wire\GenericContent->get('content_type')
+#1 [internal function]: MailServiceCommand->myCallback(Object(PhpAmqpLib\Message\AMQPMessage))
+#2 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AMQPChannel.php(572): call_user_func(Array, Object(PhpAmqpLib\Message\AMQPMessage))
+#3 [internal function]: PhpAmqpLib\Channel\AMQPChannel->basic_deliver(Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#4 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(91): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#5 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/PhpAmqpLib/Channel/AbstractChannel.php(236): PhpAmqpLib\Channel\AbstractChannel->dispatch('60,60', Object(PhpAmqpLib\Wire\AMQPReader), Object(PhpAmqpLib\Message\AMQPMessage))
+#6 /Users/marct/www/dev/mailEngine/protected/components/RabbitMQ/RabbitMQ.php(104): PhpAmqpLib\Channel\AbstractChannel->wait()
+#7 /Users/marct/www/dev/mailEngine/protected/commands/MailServiceCommand.php(65): rabbitMQ->wait()
+#8 [internal function]: MailServiceCommand->actionStart()
+#9 /Users/marct/www/dev/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MailServiceCommand), Array)
+#10 /Users/marct/www/dev/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#11 /Users/marct/www/dev/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#12 /Users/marct/www/dev/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#13 /Users/marct/www/dev/framework/yiic.php(33): CApplication->run()
+#14 /Users/marct/www/dev/mailEngine/protected/yiic.php(7): require_once('/Users/marct/ww...')
+#15 /Users/marct/www/dev/mailEngine/protected/yiic(4): require_once('/Users/marct/ww...')
+#16 {main}
+---
+Feb 03 19:55:53 [application                   ] : <I> [MailServiceCommand] [#84b44] Initialising Mail Service....
+Feb 03 19:55:53 [application                   ] : <I> [MailServiceCommand] [#84b44] Starting Mail Service....
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:55:53 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:55:57 [application                   ] : <I> [MailServiceCommand] [#ad152] Initialising Mail Service....
+Feb 03 19:55:57 [application                   ] : <I> [MailServiceCommand] [#ad152] Mail queued -  Message-ID: <1359881757.510e261d50df2@swift.generated>
+Feb 03 19:56:02 [application                   ] : <I> [MailServiceCommand] [#ad152] Message sent - Message-ID: <1359881762.510e26223a845@swift.generated>
+Feb 03 19:56:02 [application                   ] : <I> [MailServiceCommand] [#ad152] Mail queued -  Message-ID: <1359881762.510e26226b890@swift.generated>
+Feb 03 19:56:06 [application                   ] : <I> [MailServiceCommand] [#ad152] Message sent - Message-ID: <1359881766.510e262666af8@swift.generated>
+Feb 03 19:56:15 [application                   ] : <I> [MailServiceCommand] [#f8a01] Initialising Mail Service....
+Feb 03 19:56:15 [application                   ] : <I> [MailServiceCommand] [#f8a01] Starting Mail Service....
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Created queue qu.test
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Created exchange ex.test
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Created binding [qu.test <--> ex.test]
+Feb 03 19:56:15 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 03 19:56:18 [application                   ] : <I> [MailServiceCommand] [#ad152] Mail queued -  Message-ID: <1359881778.510e263261730@swift.generated>
+Feb 03 19:56:22 [application                   ] : <I> [MailServiceCommand] [#ad152] Message sent - Message-ID: <1359881782.510e26365e8db@swift.generated>
+Feb 03 19:56:23 [application                   ] : <I> [MailServiceCommand] [#0dcbf] Initialising Mail Service....
+Feb 03 19:56:23 [application                   ] : <I> [MailServiceCommand] [#0dcbf] Mail queued -  Message-ID: <1359881783.510e2637da1aa@swift.generated>
+Feb 03 19:56:29 [application                   ] : <I> [MailServiceCommand] [#0dcbf] Message sent - Message-ID: <1359881789.510e263d52d37@swift.generated>
+Feb 03 19:56:30 [application                   ] : <I> [MailServiceCommand] [#ad152] Mail queued -  Message-ID: <1359881790.510e263e6f602@swift.generated>
+Feb 03 19:56:34 [application                   ] : <I> [MailServiceCommand] [#ad152] Message sent - Message-ID: <1359881794.510e2642cc681@swift.generated>
+Feb 03 19:56:39 [application                   ] : <I> [MailServiceCommand] [#0dcbf] Mail queued -  Message-ID: <1359881799.510e26478a52d@swift.generated>
+Feb 03 19:56:43 [application                   ] : <I> [MailServiceCommand] [#0dcbf] Message sent - Message-ID: <1359881803.510e264b5bfd8@swift.generated>
