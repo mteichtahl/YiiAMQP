@@ -6,7 +6,7 @@
 
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'My Console Application',
+    'name' => 'MailServer',
     // preloading 'log' component
     'preload' => array('log'),
     'import' => array(
@@ -57,5 +57,15 @@ return array(
                 ),
             ),
         ),
+    ),
+    'params' => array(
+        
+        'adminEmail' => 'webmaster@example.com',
+        'smtpServer' => 'smtp.googlemail.com',
+        'smtpPort'  => '465',
+        'smtpConn'  => 'ssl',
+        'smtpUsername' => 'marc@teichtahl.com',
+        'smtpPassword' => 'Nmiv9qyqn!',
+        'timezone' => 'Australia/Melbourne'
     ),
 );
