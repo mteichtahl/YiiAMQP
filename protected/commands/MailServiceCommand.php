@@ -63,7 +63,7 @@ class MailServiceCommand extends CConsoleCommand {
 
         Yii::app()->rabbitMQ->createConnection();
        
-        $queue = Yii::app()->rabbitMQ->declareQueue();
+        $queue = Yii::app()->rabbitMQ->declareQueue('mail');
 
         Yii::app()->rabbitMQ->declareExchange('exchange.mailService', 'topic');
         Yii::app()->rabbitMQ->bind($queue, 'exchange.mailService', 'mail');
