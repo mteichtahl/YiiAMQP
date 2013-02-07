@@ -50,7 +50,7 @@ class MailServiceCommand extends CConsoleCommand {
     }
 
     function __construct() {
-        date_default_timezone_set('Australia/Melbourne');
+        date_default_timezone_set(Yii::app()->params['timezone']);
 
         $this->id = getmypid();
 
@@ -62,12 +62,13 @@ class MailServiceCommand extends CConsoleCommand {
         Yii::log('[' . get_class() . '] [#' . $this->id . '] Starting Mail Service....', 'info');
 
         Yii::app()->rabbitMQ->createConnection();
-        Yii::app()->rabbitMQ->setQoS('0', '1', '0');
+       
         $queue = Yii::app()->rabbitMQ->declareQueue();
 
         Yii::app()->rabbitMQ->declareExchange('exchange.mailService', 'topic');
         Yii::app()->rabbitMQ->bind($queue, 'exchange.mailService', 'mail');
-
+        Yii::app()->rabbitMQ->setQoS('0', '1', '0');
+        
         Yii::app()->rabbitMQ->registerCallback(array($this, 'myCallback'));
         Yii::app()->rabbitMQ->consume($queue, $this->id);
         Yii::app()->rabbitMQ->wait();
@@ -86,8 +87,8 @@ class MailServiceCommand extends CConsoleCommand {
 
 
             if (!$val) {
-                Yii::log('[' . get_class() . '] [#' . $mailService->id . '] Malformed JSON Message', 'info');
                 $msg->delivery_info['channel']->basic_nack($msg->delivery_info['delivery_tag'], self::NO_REQUEUE);
+                Yii::log('[' . get_class() . '] [#' . $mailService->id . '] Malformed JSON Message', 'info');
                 return;
             }
 
@@ -134,19 +135,22 @@ class MailServiceCommand extends CConsoleCommand {
 
         $startTime = microtime(true);
         if ($mailer->send($message) == 1) {
-
-            $totalTime = microtime(true) - $startTime;
-
-            Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Message sent - ' . trim($headers->get('Message-ID')) . ' [ in ' . round($totalTime, 2) . 's ]', 'info');
             $msg->delivery_info['channel']->basic_ack($deliveryTag);
+            $totalTime = microtime(true) - $startTime;
+            Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Message sent - ' . trim($headers->get('Message-ID')) . ' [ in ' . round($totalTime, 2) . 's ]', 'info');
             $mailService->messageCount++;
+            return;
         } else {
-            Yii::log('[' . get_class() . '] [#' . $mailService->id . ' Send error', 'error');
             $msg->delivery_info['channel']->basic_nack($deliveryTag, self::NO_REQUEUE);
+            Yii::log('[' . get_class() . '] [#' . $mailService->id . ' Send error', 'error');
+            return;
         }
     }
 
     protected function processInfoRequest($val, $msg) {
+        
+        $msg->delivery_info['channel']->basic_ack($deliveryTag);
+        
         $mailService = MailServiceCommand::getInstance();
 
         $deliveryTag = $msg->delivery_info['delivery_tag'];
@@ -161,7 +165,7 @@ class MailServiceCommand extends CConsoleCommand {
         Yii::log('     - Channel: ' . Yii::app()->rabbitMQ->getChannelId());
         Yii::log('     - Messages Received: ' . $mailService->messageCount);
 
-        $msg->delivery_info['channel']->basic_ack($deliveryTag);
+        
     }
 
     private function generateRandomString($length = 10) {
