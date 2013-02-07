@@ -2,8 +2,6 @@
 
 namespace PhpAmqpLib\Channel;
 
-
-
 use PhpAmqpLib\Channel\AbstractChannel;
 use PhpAmqpLib\Exception\AMQPProtocolChannelException;
 use PhpAmqpLib\Helper\MiscHelper;

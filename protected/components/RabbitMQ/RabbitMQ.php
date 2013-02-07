@@ -7,22 +7,21 @@ Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Helper', __DIR
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Exception', __DIR__ . '/PhpAmqpLib/Exception');
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Message', __DIR__ . '/PhpAmqpLib/Message');
 
-
-
-
 class rabbitMQ extends CApplicationComponent {
 
     public $server;
-    protected $connection;
-    protected $channel;
-    protected $queue;
-    protected $exchange;
-    
+    public $connection;
+    public $channel;
+    public $queue;
+    public $exchange;
+    public $managementQueue;
+    public $managementExchange;
+    public $managementCallback;
     private $callback;
 
     public function createConnection($host = NULL, $port = NULL, $user = NULL, $password = NULL, $vhost = NULL) {
 
-        Yii::log('[' . get_class() . '] Creating connection' ,'info');
+        Yii::log('[' . get_class() . '] Creating connection', 'info');
 
         //check if we need to overwrite the defaults
 
@@ -44,59 +43,83 @@ class rabbitMQ extends CApplicationComponent {
         // create the connection using $server as the config
         $this->connection = new PhpAmqpLib\Connection\AMQPConnection($this->server['host'], $this->server['port'], $this->server['user'], $this->server['password'], $this->server['vhost']);
 
+
+
         if (!$this->connection) {
-            Yii::log('['. get_class(). '] Cannot create connection', 'error');
+            Yii::log('[' . get_class() . '] Cannot create connection', 'error');
             return false;
         }
 
         $this->channel = $this->connection->channel();
 
         if (!$this->channel) {
-            Yii::log('['. get_class(). '] Cannot create channel', 'error');
+            Yii::log('[' . get_class() . '] Cannot create channel', 'error');
             return false;
         }
 
-        Yii::log('[' . get_class() . '] Channel ' . $this->channel->channel_id . ' created','info');
+        Yii::log('[' . get_class() . '] Channel ' . $this->channel->channel_id . ' created', 'info');
 
-        Yii::log('[' . get_class() . '] Connected to ' . $this->server['host'] . ':' . $this->server['port'],'info');
+        $this->managementExchange = $this->declareExchange('exchange.management', 'fanout');
+        
+        Yii::log('[' . get_class() . '] Connected to ' . $this->server['host'] . ':' . $this->server['port'], 'info');
         return $this->channel;
     }
 
-    public function declareQueue($name, $passive = false, $durable = true, $exclusive = false, $auto_delete = false) {
+    public function declareQueue($name = NULL, $passive = false, $durable = true, $exclusive = false, $auto_delete = true) {
+
+        if (!$name)
+            $name = $this->generateRandomString('10');
 
         $ret = $this->channel->queue_declare($name, $passive, $durable, $exclusive, $auto_delete);
 
         if (!is_array($ret)) {
-            Yii::log('['. get_class(). '] Cannot create queue', 'error');
+            Yii::log('[' . get_class() . '] Cannot create queue', 'error');
             return false;
         }
+        
         Yii::log('[' . get_class() . '] Created queue ' . $ret[0], 'info');
+        $this->bind($name, 'exchange.management');
         $this->queue = $ret[0];
 
-        return true;
+        return $name;
     }
 
-    public function declareExchange($name, $type = 'direct', $passive = false, $durable = true, $auto_delete = false) {
+    public function declareExchange($name, $type = 'direct', $passive = false, $durable = true, $auto_delete = true) {
 
         $ret = $this->channel->exchange_declare($name, $type, $passive, $durable, $auto_delete);
-        Yii::log('[' . get_class() . '] Created exchange ' . $name, 'info');
+        Yii::log('[' . get_class() . '] Created exchange ' . $name . ' [ ' . $type . ' ]', 'info');
         $this->exchange = $name;
         return true;
     }
-    
-    public function setQos($prefetch_size, $prefetch_count, $a_global)
-    {
+
+    public function setQos($prefetch_size, $prefetch_count, $a_global) {
         $this->channel->basic_qos($prefetch_size, $prefetch_count, $a_global);
     }
 
-    public function bind($queue, $exchange) {
+    public function bind($queue, $exchange, $routingKey = NULL) {
 
-        $this->channel->queue_bind($queue, $exchange);
-        Yii::log('[' . get_class() . '] Created binding [' . $queue . ' <--> ' . $exchange . ']','info');
+        $this->channel->queue_bind($queue, $exchange, $routingKey);
+        Yii::log('[' . get_class() . '] Created binding [' . $queue . ' <--> ' . $exchange . ']', 'info');
     }
 
-    public function consume() {
-        $this->channel->basic_consume($this->queue, '', false, false, false, false, $this->callback);
+    public function consume($queue=NULL,$consumer=NULL, $noLocal=false, $noAck=false, $exclusive=false, $nowait=false) {
+        
+        if (!$queue)
+            $queue = $this->queue;
+        
+        if ($consumer)
+            $consumer = '';
+        /*
+          queue: Queue from where to get the messages
+          consumer_tag: Consumer identifier
+          no_local: Don't receive messages published by this consumer.
+          no_ack: Tells the server if the consumer will acknowledge the messages.
+          exclusive: Request exclusive consumer access, meaning only this consumer can access the queue
+          nowait: don't wait for a server response. In case of error the server will raise a channel
+          exception
+          callback: A PHP Callback
+         */
+        $this->channel->basic_consume($queue, $consumer, $noLocal, $noAck, $exclusive, $nowait, $this->callback);
     }
 
     public function wait() {
@@ -104,20 +127,32 @@ class rabbitMQ extends CApplicationComponent {
             $this->channel->wait();
         }
     }
-    
-    public function registerCallback($callback)
-    {
-        //print_r($callback);
-        
-        if ( is_callable( $callback ) )  
-        {
-            Yii::log('[' . get_class() . '] Registering worker callback','info');
-            $this->callback = $callback  ;
-            $this->consume();
+
+    public function getChannelId() {
+        return $this->channel->getChannelId();
+    }
+
+    public function registerCallback($callback) {
+        if (is_callable($callback)) {
+            Yii::log('[' . get_class() . '] Registering worker callback', 'info');
+            $this->callback = $callback;
+           
         }
-        
-        
-            
+    }
+
+    private function generateRandomString($length = 10) {
+        $randomstring = '';
+        if ($length > 32) {
+            $multiplier = round($length / 32, 0, PHP_ROUND_HALF_DOWN);
+            $remainder = $length % 32;
+            for ($i = 0; $i < $multiplier; $i++) {
+                $randomstring .= substr(str_shuffle(md5(rand())), 0, 32);
+            }
+            $randomstring .= substr(str_shuffle(md5(rand())), 0, $remainder);
+        }
+        else
+            $randomstring = substr(str_shuffle(md5(rand())), 0, $length);
+        return $randomstring;
     }
 
 }

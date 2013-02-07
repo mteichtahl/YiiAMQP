@@ -58,4 +58,13 @@ return array(
             ),
         ),
     ),
+    'params' => array(
+        // this is used in contact page
+        'adminEmail' => 'webmaster@example.com',
+        'smtpServer' => 'smtp.googlemail.com',
+        'smtpPort'  => '465',
+        'smtpConn'  => 'ssl',
+        'smtpUsername' => 'marc@teichtahl.com',
+        'smtpPassword' => 'Nmiv9qyqn!'
+    ),
 );
