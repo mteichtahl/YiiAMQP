@@ -5893,3 +5893,29 @@ Feb 09 01:48:50 [application                   ] : <I> [rabbitMQ] Registering wo
 Feb 09 01:48:56 [application                   ] : <I> [MailServiceCommand] [#96566] Initialising Mail Service....
 Feb 09 01:48:56 [application                   ] : <I> [MailServiceCommand] [#96566] [exchange.mailService] Mail queued -  Message-ID: <1360334936.51151058b182c@swift.generated>
 Feb 09 01:48:56 [application                   ] : <I> [MailServiceCommand] [#96566] [exchange.mailService] Message NOT send - Test Requested - Message-ID: <1360334936.51151058b182c@swift.generated>
+Feb 09 01:58:05 [application                   ] : <I> [MailServiceCommand] [#97764] Initialising Mail Service....
+Feb 09 01:58:05 [application                   ] : <I> [MailServiceCommand] [#97764] Starting Mail Service....
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Created exchange exchange.management [ fanout ]
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Created queue mail
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.management]
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Created exchange exchange.mailService [ topic ]
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.mailService]
+Feb 09 01:58:05 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 09 01:59:30 [application                   ] : <I> [MailServiceCommand] [#97918] Initialising Mail Service....
+Feb 09 01:59:30 [application                   ] : <I> [MailServiceCommand] [#97918] Starting Mail Service....
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Created exchange exchange.management [ fanout ]
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Created queue mail
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.management]
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Created exchange exchange.mailService [ topic ]
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.mailService]
+Feb 09 01:59:30 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 09 02:00:07 [application                   ] : <I> [MailServiceCommand] [#97764] Initialising Mail Service....
+Feb 09 02:00:07 [application                   ] : <I> [MailServiceCommand] [#97764] Malformed JSON Message
+Feb 09 02:00:29 [application                   ] : <I> [MailServiceCommand] [#97918] Initialising Mail Service....
+Feb 09 02:00:29 [application                   ] : <I> [MailServiceCommand] [#97918] Malformed JSON Message
