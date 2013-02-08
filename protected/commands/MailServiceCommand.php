@@ -3,6 +3,7 @@
 /**
   {
   "request": {
+  "test" : "true",
   "bcc": [
   "marc@amplifieragency.com"
   ],
@@ -134,6 +135,13 @@ class MailServiceCommand extends CConsoleCommand {
         Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Mail queued -  ' . trim($headers->get('Message-ID')), 'info');
 
         $startTime = microtime(true);
+        
+        if ($val->request->test)
+        {
+            Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Message NOT send - Test Requested - ' . trim($headers->get('Message-ID')), 'info');
+            return;
+        }
+        
         if ($mailer->send($message) == 1) {
             $msg->delivery_info['channel']->basic_ack($deliveryTag);
             $totalTime = microtime(true) - $startTime;

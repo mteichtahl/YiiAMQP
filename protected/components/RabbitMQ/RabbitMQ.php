@@ -83,6 +83,17 @@ class rabbitMQ extends CApplicationComponent {
 
         return $name;
     }
+    
+     public function sendTextMessage($msg, $routingKey='') {
+        $message =new PhpAmqpLib\Message\AMQPMessage($msg,array('content_type' => 'text/plain','delivery_mode' => 2));
+        $this->channel->basic_publish($message, $this->exchange, $routingKey);
+        
+    }
+    
+      public function sendJSONMessage($msg, $routingKey='') {
+        $message =new PhpAmqpLib\Message\AMQPMessage($msg,array('content_type' => 'text/JSON','delivery_mode' => 2));
+        $this->channel->basic_publish($message, $this->exchange, $routingKey);   
+    }
 
     public function declareExchange($name, $type = 'direct', $passive = false, $durable = true, $auto_delete = true) {
 
