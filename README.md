@@ -19,7 +19,7 @@ Please ensure you install and configure these dependencies prior to the installa
 
 ### Documentation
 
-Refer to [docs/class-YiiAMQP.html] for details on the component methods
+Refer to docs/class-YiiAMQP.html for details on the component methods
 
 ##Quick Start
 Clone the repo, `git clone git://github.com/mteichtahl/YiiAMQP.git`, or [download the latest release](https://github.com/mteichtahl/YiiAMQP/zipball/master).
