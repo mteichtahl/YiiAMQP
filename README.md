@@ -70,19 +70,19 @@ Create the callback function
 public static function myCallback($msg) { }
 ```
 
-###Contributing
+##Contributing
 Please submit all pull requests against *-wip branches. Thanks!
 
-###Bug tracker
+##Bug tracker
 If you find any bugs, please create an issue at [https://github.com/mteichtahl/YiiAMQP/issues](https://github.com/mteichtahl/YiiAMQP/issues)
 
-###Credits
+##Credits
 
 - gaAutoLoader [https://gist.github.com/mindplay-dk/4234540] Rasmus Schultz
 - CPSLiveLogRoute [http://www.pogostick.com] Jerry Ablan jablan@pogostick.com
 - php-amqplib [https://github.com/videlalvaro/php-amqplib] Vadim Zaliva lord@crocodile.org
 - rabbitMQ [http://www.rabbitmq.com/] VMWare
 
-###License  
+##License  
 [![License](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)  
 This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)  
