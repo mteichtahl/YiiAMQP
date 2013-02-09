@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class PhpAmqpLib\Wire\AMQPReader | YiiAMQP</title>
+
+	<script type="text/javascript" src="resources/combined.js?709491018"></script>
+	<script type="text/javascript" src="elementlist.js?2810205929"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpAmqpLib.html">PhpAmqpLib<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Channel.html">Channel</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Connection.html">Connection</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Helper.Protocol.html">Protocol</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpAmqpLib.Message.html">Message</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Functional.html">Functional</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.html">Unit<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.Helper.Writer.html">Writer</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="namespace-PhpAmqpLib.Wire.html">Wire</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpAmqpLib.Wire.AMQPDecimal.html">AMQPDecimal</a></li>
+				<li class="active"><a href="class-PhpAmqpLib.Wire.AMQPReader.html">AMQPReader</a></li>
+				<li><a href="class-PhpAmqpLib.Wire.AMQPWriter.html">AMQPWriter</a></li>
+				<li><a href="class-PhpAmqpLib.Wire.BufferedInput.html">BufferedInput</a></li>
+				<li><a href="class-PhpAmqpLib.Wire.Constants080.html">Constants080</a></li>
+				<li><a href="class-PhpAmqpLib.Wire.Constants091.html">Constants091</a></li>
+				<li><a href="class-PhpAmqpLib.Wire.GenericContent.html">GenericContent</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpAmqpLib.Wire.html" title="Summary of PhpAmqpLib\Wire"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class AMQPReader</h1>
+
+
+	<div class="description">
+	
+<p>This class can read from a string or from a stream</p>
+
+<p>TODO : split this class: AMQPStreamReader and a AMQPBufferReader</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PhpAmqpLib.html">PhpAmqpLib</a>\<a href="namespace-PhpAmqpLib.Wire.html">Wire</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#12-415" title="Go to source code">PhpAmqpLib/Wire/AMQPReader.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#27-45" title="Go to source code">__construct</a>( <span>string <var>$str</var></span>, <span>null <var>$sock</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$timeout</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str</dd>
+					<dt><var>$sock</var></dt>
+					<dd><code>null</code><br>$sock</dd>
+					<dt><var>$timeout</var></dt>
+					<dd><code>integer</code><br>$timeout</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#47-55" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			
+<p>close the stream</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>close the stream</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#57-67" title="Go to source code">read</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wait" id="_wait">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wait">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#69-96" title="Go to source code">wait</a>( )</code>
+
+		<div class="description short">
+			
+<p>Wait until some data is retrieved from the socket.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Wait until some data is retrieved from the socket.</p>
+
+<p>AMQPTimeoutException can be raised if the timeout is set</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>PhpAmqpLib\Exception\AMQPTimeoutException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_bit" id="_read_bit">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_bit">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#146-161" title="Go to source code">read_bit</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_octet" id="_read_octet">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_octet">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#163-172" title="Go to source code">read_octet</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_short" id="_read_short">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_short">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#174-183" title="Go to source code">read_short</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_php_int" id="_read_php_int">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_php_int">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#185-206" title="Go to source code">read_php_int</a>( )</code>
+
+		<div class="description short">
+			
+<p>Reads 32 bit integer in big-endian byte order.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reads 32 bit integer in big-endian byte order.</p>
+
+<p>On 64 bit systems it will return always usngined int value in
+0..2<sup>32</sup> range.</p>
+
+<p>On 32 bit systems it will return signed int value in</p>
+
+<ul>
+	<li>2<sup>31</sup>...+2<sup>31</sup> range.</li>
+</ul>
+
+<p>Use with caution!</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_long" id="_read_long">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_long">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#208-220" title="Go to source code">read_long</a>( )</code>
+
+		<div class="description short">
+			
+<p>PHP does not have unsigned 32 bit int, so we return it as a string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PHP does not have unsigned 32 bit int, so we return it as a string</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_longlong" id="_read_longlong">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_longlong">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#236-254" title="Go to source code">read_longlong</a>( )</code>
+
+		<div class="description short">
+			
+<p>Even on 64 bit systems PHP integers are singed. Since we need an unsigned
+value here we return it as a string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Even on 64 bit systems PHP integers are singed. Since we need an unsigned
+value here we return it as a string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_shortstr" id="_read_shortstr">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_shortstr">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#256-266" title="Go to source code">read_shortstr</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read a utf-8 encoded string that's stored in up to 255 bytes. Return it
+decoded as a PHP unicode object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read a utf-8 encoded string that's stored in up to 255 bytes. Return it
+decoded as a PHP unicode object.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_longstr" id="_read_longstr">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_longstr">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#268-283" title="Go to source code">read_longstr</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read a string that's up to 2**32 bytes, the encoding isn't specified in the
+AMQP spec, so just return it as a plain PHP string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read a string that's up to 2**32 bytes, the encoding isn't specified in the
+AMQP spec, so just return it as a plain PHP string.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_timestamp" id="_read_timestamp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_timestamp">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#285-292" title="Go to source code">read_timestamp</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read and AMQP timestamp, which is a 64-bit integer representing seconds since
+the Unix epoch in 1-second resolution.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read and AMQP timestamp, which is a 64-bit integer representing seconds since
+the Unix epoch in 1-second resolution.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_table" id="_read_table">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_table">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#294-317" title="Go to source code">read_table</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read an AMQP table, and return as a PHP array. keys are strings, values are
+(type,value) tuples.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read an AMQP table, and return as a PHP array. keys are strings, values are
+(type,value) tuples.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_array" id="_read_array">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_array">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#319-340" title="Go to source code">read_array</a>( )</code>
+
+		<div class="description short">
+			
+<p>Reads the array in the next value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reads the array in the next value.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_value" id="_read_value">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_value">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#342-388" title="Go to source code">read_value</a>( <span>string <var>$fieldType</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Reads the next value as the provided field type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reads the next value as the provided field type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fieldType</var></dt>
+					<dd><code>string</code><br>$fieldType the char field type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tell" id="_tell">
+
+		<td class="attributes"><code>
+			 protected 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tell">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#390-396" title="Go to source code">tell</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTimeout" id="_setTimeout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTimeout">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#398-406" title="Go to source code">setTimeout</a>( <span>mixed <var>$timeout</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the timeout (second)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the timeout (second)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$timeout</var></dt>
+					<dd><code>mixed</code><br>$timeout</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimeout" id="_getTimeout">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTimeout">#</a>
+		<code><a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#408-414" title="Go to source code">getTimeout</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="str" id="$str">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#19" title="Go to source code"><var>$str</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$str" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sock" id="$sock">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#20" title="Go to source code"><var>$sock</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$sock" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="offset" id="$offset">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#21" title="Go to source code"><var>$offset</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$offset" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bitcount" id="$bitcount">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#22" title="Go to source code"><var>$bitcount</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$bitcount" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="is64bits" id="$is64bits">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#23" title="Go to source code"><var>$is64bits</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$is64bits" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="timeout" id="$timeout">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#24" title="Go to source code"><var>$timeout</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$timeout" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bits" id="$bits">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Wire.AMQPReader.html#25" title="Go to source code"><var>$bits</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$bits" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		YiiAMQP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
