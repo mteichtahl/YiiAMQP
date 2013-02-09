@@ -17,6 +17,10 @@ Please ensure you install and configure these dependencies prior to the installa
   This is just a repackage of mindplay-dk's GAutoloader [https://gist.github.com/4234540]
 - CPSLiveLogRoute [http://www.yiiframework.com/wiki/140/real-time-logging/] 
 
+### Documentation
+
+Refer to [docs/class-YiiAMQP.html] for details on the component methods
+
 ##Quick Start
 Clone the repo, `git clone git://github.com/mteichtahl/YiiAMQP.git`, or [download the latest release](https://github.com/mteichtahl/YiiAMQP/zipball/master).
 
