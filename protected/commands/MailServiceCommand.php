@@ -136,7 +136,7 @@ class MailServiceCommand extends CConsoleCommand {
 
         $startTime = microtime(true);
         
-        if ($val->request->test)
+        if ($val->request->test=='true')
         {
             Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Message NOT send - Test Requested - ' . trim($headers->get('Message-ID')), 'info');
             return;

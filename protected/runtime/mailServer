@@ -5919,3 +5919,44 @@ Feb 09 02:00:07 [application                   ] : <I> [MailServiceCommand] [#97
 Feb 09 02:00:07 [application                   ] : <I> [MailServiceCommand] [#97764] Malformed JSON Message
 Feb 09 02:00:29 [application                   ] : <I> [MailServiceCommand] [#97918] Initialising Mail Service....
 Feb 09 02:00:29 [application                   ] : <I> [MailServiceCommand] [#97918] Malformed JSON Message
+Feb 10 20:59:50 [application                   ] : <I> [MailServiceCommand] [#4224] Initialising Mail Service....
+Feb 10 20:59:50 [application                   ] : <I> [MailServiceCommand] [#4224] Starting Mail Service....
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Created exchange exchange.management [ fanout ]
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Created queue mail
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.management]
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Created exchange exchange.mailService [ topic ]
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.mailService]
+Feb 10 20:59:50 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 10 21:00:37 [application                   ] : <I> [MailServiceCommand] [#4224] Initialising Mail Service....
+Feb 10 21:00:37 [application                   ] : <I> [MailServiceCommand] [#4224] [exchange.mailService] Mail queued -  Message-ID: <1360490437.51176fc51676f@swift.generated>
+Feb 10 21:00:37 [application                   ] : <I> [MailServiceCommand] [#4224] [exchange.mailService] Message NOT send - Test Requested - Message-ID: <1360490437.51176fc51676f@swift.generated>
+Feb 10 21:04:43 [application                   ] : <I> [MailServiceCommand] [#4726] Initialising Mail Service....
+Feb 10 21:04:43 [application                   ] : <I> [MailServiceCommand] [#4726] Starting Mail Service....
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Created exchange exchange.management [ fanout ]
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Created queue mail
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.management]
+Feb 10 21:04:43 [application                   ] : <I> [rabbitMQ] Created exchange exchange.mailService [ topic ]
+Feb 10 21:04:44 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.mailService]
+Feb 10 21:04:44 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 10 21:05:58 [application                   ] : <I> [MailServiceCommand] [#4840] Initialising Mail Service....
+Feb 10 21:05:58 [application                   ] : <I> [MailServiceCommand] [#4840] Starting Mail Service....
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Creating connection
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Channel 1 created
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Created exchange exchange.management [ fanout ]
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Connected to localhost:5672
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Created queue mail
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.management]
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Created exchange exchange.mailService [ topic ]
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Created binding [mail <--> exchange.mailService]
+Feb 10 21:05:58 [application                   ] : <I> [rabbitMQ] Registering worker callback
+Feb 10 21:06:31 [application                   ] : <I> [MailServiceCommand] [#4840] Initialising Mail Service....
+Feb 10 21:06:31 [application                   ] : <I> [MailServiceCommand] [#4840] [exchange.mailService] Mail queued -  Message-ID: <1360490791.51177127a6151@swift.generated>
+Feb 10 21:06:38 [application                   ] : <I> [MailServiceCommand] [#4840] [exchange.mailService] Message sent - Message-ID: <1360490798.5117712e956e2@swift.generated> [ in 6.93s ]
+Feb 10 21:07:59 [application                   ] : <I> [MailServiceCommand] [#4840] [exchange.mailService] Mail queued -  Message-ID: <1360490879.5117717f05842@swift.generated>
+Feb 10 21:08:03 [application                   ] : <I> [MailServiceCommand] [#4840] [exchange.mailService] Message sent - Message-ID: <1360490883.51177183dd337@swift.generated> [ in 4.88s ]
