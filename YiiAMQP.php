@@ -255,6 +255,64 @@ class YiiAMQP extends CApplicationComponent {
             $this->callback = $callback;
         }
     }
+    
+    /**
+     * Return general information about the rabbitMQ server/Cluster connected
+     * 
+     * @return array 
+     *
+     * */
+     public function getRabbitMQInfo() {
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'].'/api/overview');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERPWD, $this->server['user'].':'.$this->server['password']);
+
+        $output = CJSON::decode(curl_exec($ch));
+        curl_close($ch);
+       
+        return $output;
+    }
+    
+     /**
+     * Return general information about the rabbitMQ exchanges
+     * 
+     * @return array 
+     *
+     * */
+    public function getExchanges() {
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'].'/api/exchanges');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERPWD, $this->server['user'].':'.$this->server['password']);
+
+        $output = CJSON::decode(curl_exec($ch));
+        curl_close($ch);
+       
+        return $output;
+    }
+    
+     /**
+     * Return general information about the rabbitMQ queues
+     * 
+     * @return array 
+     *
+     * */
+    public function getQueues() {
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'].'/api/queues');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERPWD, $this->server['user'].':'.$this->server['password']);
+
+        $output = CJSON::decode(curl_exec($ch));
+        curl_close($ch);
+       
+        return $output;
+    }
+
 
     /**
      * Utility function for returning a random string of specified length
