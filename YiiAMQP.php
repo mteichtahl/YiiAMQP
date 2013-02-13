@@ -12,6 +12,9 @@
  * 
  * @package YiiAMQP
  */
+
+require 'guzzle/vendor/autoload.php';
+
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Connection', __DIR__ . '/PhpAmqpLib/Connection');
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Channel', __DIR__ . '/PhpAmqpLib/Channel');
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Wire', __DIR__ . '/PhpAmqpLib/Wire');
@@ -21,9 +24,10 @@ Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Message', __DI
 
 
 Yii::app()->autoloader->getAutoloader()->addNamespace('Guzzle\Plugin\CurlAuth', __DIR__ . '/guzzle/src/Guzzle/Plugin/CurlAuth');
+Yii::app()->autoloader->getAutoloader()->addNamespace('Guzzle\Service\Description', __DIR__ . '/guzzle/src/Guzzle/Service/Description');
 
 
-require 'guzzle/vendor/autoload.php';
+
 
 class RabbitMQService extends Guzzle\Service\Client {
 
@@ -315,24 +319,18 @@ class YiiAMQP extends CApplicationComponent {
     public function getRabbitMQInfo() {
 
         $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
-        $description = ServiceDescription::factory('rabbitMQ.json');
+        
+        $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
         $this->client->setDescription($description);
         
-        $authPlugin = new CurlAuthPlugin($this->server['user'], $this->server['password']);
+        $authPlugin = new Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
 
         $this->client->addSubscriber($authPlugin);
 
-        $command = $this->client->getCommand('overview');
-                $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'] . '/api/overview');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERPWD, $this->server['user'] . ':' . $this->server['password']);
-
-        $output = CJSON::decode(curl_exec($ch));
-        curl_close($ch);
-
-        return $output;
+        $command  = $this->client->getCommand('overview');
+        
+        return $this->client->execute($command);
+        
     }
 
     /**
