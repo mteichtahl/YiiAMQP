@@ -20,7 +20,7 @@ Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Exception', __
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Message', __DIR__ . '/PhpAmqpLib/Message');
 
 
-Yii::app()->autoloader->getAutoloader()->addNamespace('Guzzle\Plugin\CurlAuth', __DIR__ . '/guzzle/src/Guzzle/Plugin/CurlAuth');
+//Yii::app()->autoloader->getAutoloader()->addNamespace('Guzzle\Plugin\CurlAuth', __DIR__ . '/guzzle/src/Guzzle/Plugin/CurlAuth');
 
 
 require 'guzzle/vendor/autoload.php';
