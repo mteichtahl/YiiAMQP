@@ -343,16 +343,18 @@ class YiiAMQP extends CApplicationComponent {
 
 
 
-        $ch = curl_init();
+      $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
+        
+        $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
+        $this->client->setDescription($description);
+        
+        $authPlugin = new Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
 
-        curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'] . '/api/exchanges');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERPWD, $this->server['user'] . ':' . $this->server['password']);
+        $this->client->addSubscriber($authPlugin);
 
-        $output = CJSON::decode(curl_exec($ch));
-        curl_close($ch);
-
-        return $output;
+        $command  = $this->client->getCommand('exchanges');
+        
+        return $this->client->execute($command);
     }
 
     /**
@@ -362,16 +364,18 @@ class YiiAMQP extends CApplicationComponent {
      *
      * */
     public function getQueues() {
-        $ch = curl_init();
+       $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
+        
+        $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
+        $this->client->setDescription($description);
+        
+        $authPlugin = new Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
 
-        curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'] . '/api/queues');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERPWD, $this->server['user'] . ':' . $this->server['password']);
+        $this->client->addSubscriber($authPlugin);
 
-        $output = CJSON::decode(curl_exec($ch));
-        curl_close($ch);
-
-        return $output;
+        $command  = $this->client->getCommand('queues');
+        
+        return $this->client->execute($command);
     }
 
     /**
