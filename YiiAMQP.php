@@ -27,7 +27,7 @@ Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Message', __DI
  *
  * @package    YiiAMQP
  * @subpackage Common
- * @author     Marc Teichtahl <marc@teichtahl.com   >
+ * @author     Marc Teichtahl <marc@teichtahl.com>
  */
 class YiiAMQP extends CApplicationComponent {
 
