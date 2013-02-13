@@ -19,6 +19,57 @@ Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Helper', __DIR
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Exception', __DIR__ . '/PhpAmqpLib/Exception');
 Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Message', __DIR__ . '/PhpAmqpLib/Message');
 
+
+Yii::app()->autoloader->getAutoloader()->addNamespace('Guzzle\Plugin\CurlAuth', __DIR__ . '/guzzle/src/Guzzle/Plugin/CurlAuth');
+
+
+require 'guzzle/vendor/autoload.php';
+
+class RabbitMQService extends Guzzle\Service\Client {
+
+    /**
+     * Factory method to create a new Guzzle
+     *
+     * The following array keys and values are available options:
+     * - base_url: Base URL of web service
+     * - scheme:   URI scheme: http or https
+     * - username: API username
+     * - password: API password
+     *
+     * @param array|Collection $config Configuration data
+     *
+     * @return self
+     */
+    public static function factory($config = array()) {
+
+        $default = array(
+            'base_url' => '{scheme}://{username}.test.com/',
+            'scheme' => 'https'
+        );
+        $required = array('username', 'password', 'base_url');
+        $config = Guzzle\Common\Collection::fromConfig($config, $default, $required);
+
+
+        $client = NULL;
+
+        try {
+            $client = new self($config->get('base_url'));
+        } catch (CException $e) {
+            echo 'error: ' . print_r($e);
+        }
+
+        // Attach a service description to the client
+        $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
+        $client->setDescription($description);
+
+
+        return $client;
+    }
+
+}
+
+
+
 /**
  * YiiAMQP
  *
@@ -40,6 +91,7 @@ class YiiAMQP extends CApplicationComponent {
     public $managementExchange;
     public $managementCallback;
     private $callback;
+    private $client;
 
     /**
      * Creates a connection to a rabbitMQ server
@@ -282,6 +334,13 @@ class YiiAMQP extends CApplicationComponent {
      *
      * */
     public function getExchanges() {
+        
+        $description = ServiceDescription::factory('/path/to/client.json');
+        
+        print_r($description);
+        
+        app()->end();
+        
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, 'http://' . $this->server['host'] . ':1' . $this->server['port'].'/api/exchanges');
