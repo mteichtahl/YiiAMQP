@@ -38,4 +38,4 @@ ehthumbs.db
 Thumbs.db
 
 # Application log files
-MailService/protected/runtime
+protected/runtime
