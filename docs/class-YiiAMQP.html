@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class YiiAMQP | YiiAMQP</title>
+
+	<script type="text/javascript" src="resources/combined.js?709491018"></script>
+	<script type="text/javascript" src="elementlist.js?2810205929"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.html">PhpAmqpLib<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Channel.html">Channel</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Connection.html">Connection</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Helper.Protocol.html">Protocol</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpAmqpLib.Message.html">Message</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Functional.html">Functional</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.html">Unit<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.Helper.Writer.html">Writer</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpAmqpLib.Wire.html">Wire</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-YiiAMQP.html">YiiAMQP</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class YiiAMQP</h1>
+
+
+	<div class="description">
+	
+<p>YiiAMQP</p>
+
+<p>The class is a Yii CApplicationCompontent to be used as a component in Yii
+applications.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+CApplicationComponent
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>YiiAMQP</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> YiiAMQP\Common<br />
+
+				<b>Copyright:</b>
+				Copyright © Marc Teichtahl 2013-<br />
+				<b>License:</b>
+				<a href="http://www.opensource.org/licenses/bsd-license.php">New BSD License</a><br />
+				<b>Author:</b>
+				Marc Teichtahl &lt;<a
+href="mailto:marc&#64;teichtahl.com">marc&#64;<!---->teichtahl.com</a> &gt;<br />
+		<b>Located at</b> <a href="source-class-YiiAMQP.html#22-280" title="Go to source code">YiiAMQP.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="createConnection" id="_createConnection">
+
+		<td class="attributes"><code>
+			 public 
+			An
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createConnection">#</a>
+		<code><a href="source-class-YiiAMQP.html#44-96" title="Go to source code">createConnection</a>( <span>string <var>$host</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$port</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$user</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$password</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$vhost</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a connection to a rabbitMQ server</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a connection to a rabbitMQ server</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>string</code><br>$host IP Address or hostname of the rabbitMQ server. If NULL configuration
+setting will be used</dd>
+					<dt><var>$port</var></dt>
+					<dd><code>string</code><br>$port Post number of the rabbitMQ server. If NULL configuration setting will be
+used</dd>
+					<dt><var>$user</var></dt>
+					<dd><code>string</code><br>$user Username of the authorised rabbitMQ user. If NULL configuration setting
+will be used</dd>
+					<dt><var>$password</var></dt>
+					<dd><code>string</code><br>$password Password of the authorised rabbitMQ user. If NULL configuration
+setting will be used</dd>
+					<dt><var>$vhost</var></dt>
+					<dd><code>string</code><br>$vhost virtual rabbitMQ server. If NULL configuration setting will be used</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>An</code><br>AMQP channel or FALSE on failure<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="declareQueue" id="_declareQueue">
+
+		<td class="attributes"><code>
+			 public 
+			An
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_declareQueue">#</a>
+		<code><a href="source-class-YiiAMQP.html#98-126" title="Go to source code">declareQueue</a>( <span>string <var>$name</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$passive</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$durable</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$exclusive</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$auto_delete</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Declares an AMQP queue</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Declares an AMQP queue</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Name of the queue to be declared</dd>
+					<dt><var>$passive</var></dt>
+					<dd><code>boolean</code><br>$passive If set, the server will reply with Declare-Ok if the queue already
+exists with the same name, and raise an error if not</dd>
+					<dt><var>$durable</var></dt>
+					<dd><code>boolean</code><br>$durable If set when creating a new queue, the queue will be marked as durable.
+Durable queues remain active when a server restarts. Non-durable queues
+(transient queues) are purged if/when a server restarts. Note that durable
+queues do not necessarily hold persistent messages, although it does not make
+sense to send persistent messages to a transient queue.</dd>
+					<dt><var>$exclusive</var></dt>
+					<dd><code>boolean</code><br>$exclusive Exclusive queues may only be accessed by the current connection, and
+are deleted when that connection closes. Passive declaration of an exclusive
+queue by other connections are not allowed.</dd>
+					<dt><var>$auto_delete</var></dt>
+					<dd><code>boolean</code><br>$auto_delete If set, the queue is deleted when all consumers have finished using
+it. The last consumer can be cancelled either explicitly or because its channel
+is closed. If there was no consumer ever on the queue, it won't be deleted.
+Applications can explicitly delete auto-delete queues using the Delete method as
+normal.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>An</code><br>AMQP channel or FALSE on failure<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendTextMessage" id="_sendTextMessage">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendTextMessage">#</a>
+		<code><a href="source-class-YiiAMQP.html#128-138" title="Go to source code">sendTextMessage</a>( <span>string <var>$msg</var></span>, <span>string <var>$routingKey</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Send a plain text message (content_type = text/plain)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send a plain text message (content_type = text/plain)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg Content of the message to be sent</dd>
+					<dt><var>$routingKey</var></dt>
+					<dd><code>string</code><br>$routingKey Routing key to be used</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendJSONMessage" id="_sendJSONMessage">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendJSONMessage">#</a>
+		<code><a href="source-class-YiiAMQP.html#140-150" title="Go to source code">sendJSONMessage</a>( <span>string <var>$msg</var></span>, <span>string <var>$routingKey</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Send a JSON message (content_type = text/JSON)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send a JSON message (content_type = text/JSON)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg Content of the message to be sent</dd>
+					<dt><var>$routingKey</var></dt>
+					<dd><code>string</code><br>$routingKey Routing key to be used</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="declareExchange" id="_declareExchange">
+
+		<td class="attributes"><code>
+			 public 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_declareExchange">#</a>
+		<code><a href="source-class-YiiAMQP.html#152-169" title="Go to source code">declareExchange</a>( <span>string <var>$name</var></span>, <span>string <var>$type</var> = <span class="php-quote">'direct'</span></span>, <span>boolean <var>$passive</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$durable</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$auto_delete</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Declares an AMQP exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Declares an AMQP exchange</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Name of the exchange to be declared</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type Each exchange belongs to one of a set of exchange types implemented by the
+server. The exchange types define the functionality of the exchange - i.e. how
+messages are routed through it. It is not valid or meaningful to attempt to
+change the type of an existing exchange.</dd>
+					<dt><var>$passive</var></dt>
+					<dd><code>boolean</code><br>$passive If set, the server will reply with Declare-Ok if the exchange already
+exists with the same name, and raise an error if not. The client can use this to
+check whether an exchange exists without modifying the server state. When set,
+all other method fields except name and no-wait are ignored. A declare with both
+passive and no-wait has no effect. Arguments are compared for semantic
+equivalence.</dd>
+					<dt><var>$durable</var></dt>
+					<dd><code>boolean</code><br>$durable If set when creating a new exchange, the exchange will be marked as
+durable. Durable exchanges remain active when a server restarts. Non-durable
+exchanges (transient exchanges) are purged if/when a server restarts.</dd>
+					<dt><var>$auto_delete</var></dt>
+					<dd><code>boolean</code><br>$auto_delete If set, the exchange is deleted when all queues have finished using
+it.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>on success, otherwise false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setQos" id="_setQos">
+
+		<td class="attributes"><code>
+			 public 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setQos">#</a>
+		<code><a href="source-class-YiiAMQP.html#171-182" title="Go to source code">setQos</a>( <span>string|integer <var>$prefetch_size</var></span>, <span>string|integer <var>$prefetch_count</var></span>, <span>boolean <var>$a_global</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set QoS parameters for the current channel</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set QoS parameters for the current channel</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$prefetch_size</var></dt>
+					<dd><code>string|integer</code><br>$prefetch_size The client can request that messages be sent in advance so that
+when the client finishes processing a message, the following message is already
+held locally, rather than needing to be sent down the channel. Prefetching gives
+a performance improvement. This field specifies the prefetch window size in
+octets. The server will send a message in advance if it is equal to or smaller
+in size than the available prefetch size (and also falls into other prefetch
+limits). May be set to zero, meaning "no specific limit", although other
+prefetch limits may still apply. The prefetch-size is ignored if the no-ack
+option is set.</dd>
+					<dt><var>$prefetch_count</var></dt>
+					<dd><code>string|integer</code><br>$prefetch_count Specifies a prefetch window in terms of whole messages. This
+field may be used in combination with the prefetch-size field; a message will
+only be sent in advance if both prefetch windows (and those at the channel and
+connection level) allow it. The prefetch-count is ignored if the no-ack option
+is set.</dd>
+					<dt><var>$a_global</var></dt>
+					<dd><code>boolean</code><br>$a_global By default the QoS settings apply to the current channel only. If this
+field is set, they are applied to the entire connection.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>on success, otherwise false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bind" id="_bind">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bind">#</a>
+		<code><a href="source-class-YiiAMQP.html#184-195" title="Go to source code">bind</a>( <span>string <var>$queue</var></span>, <span>string <var>$exchange</var></span>, <span>string <var>$routingKey</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Bind a queue to an exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Bind a queue to an exchange</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queue</var></dt>
+					<dd><code>string</code><br>$queue Specifies the name of the destination exchange to bind.</dd>
+					<dt><var>$exchange</var></dt>
+					<dd><code>string</code><br>$exchange Specifies the name of the source exchange to bind.</dd>
+					<dt><var>$routingKey</var></dt>
+					<dd><code>string</code><br>$routingKey Specifies the routing key for the binding. The routing key is used
+for routing messages depending on the exchange configuration. Not all exchanges
+use a routing key - refer to the specific exchange documentation.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="consume" id="_consume">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_consume">#</a>
+		<code><a href="source-class-YiiAMQP.html#197-224" title="Go to source code">consume</a>( <span>string <var>$queue</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$consumerTag</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$noLocal</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$noAck</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$exclusive</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$nowait</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>This method asks the server to start a "consumer", which is a transient
+request for messages from a specific queue. Consumers last as long as the
+channel they were declared on, or until the client cancels them.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This method asks the server to start a "consumer", which is a transient
+request for messages from a specific queue. Consumers last as long as the
+channel they were declared on, or until the client cancels them.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queue</var></dt>
+					<dd><code>string</code><br>$queue Specifies the name of the queue to consume from.</dd>
+					<dt><var>$consumerTag</var></dt>
+					<dd><code>string</code><br>$consumerTag Specifies the identifier for the consumer. The consumer tag is
+local to a channel, so two clients can use the same consumer tags. If this field
+is empty the server will generate a unique tag.</dd>
+					<dt><var>$noLocal</var></dt>
+					<dd><code>boolean</code><br>$noLocal Don't receive messages published by this consumer.</dd>
+					<dt><var>$noAck</var></dt>
+					<dd><code>boolean</code><br>$noAck Tells the server if the consumer will acknowledge the messages.</dd>
+					<dt><var>$exclusive</var></dt>
+					<dd><code>boolean</code><br>$exclusive Request exclusive consumer access, meaning only this consumer can
+access the queue.</dd>
+					<dt><var>$nowait</var></dt>
+					<dd><code>boolean</code><br>$nowait don't wait for a server response. In case of error the server will raise
+a channel exception</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wait" id="_wait">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wait">#</a>
+		<code><a href="source-class-YiiAMQP.html#226-234" title="Go to source code">wait</a>( )</code>
+
+		<div class="description short">
+			
+<p>Wait for some expected AMQP methods and dispatch to them.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Wait for some expected AMQP methods and dispatch to them.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getChannelId" id="_getChannelId">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getChannelId">#</a>
+		<code><a href="source-class-YiiAMQP.html#236-244" title="Go to source code">getChannelId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the Id for the channel being used</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the Id for the channel being used</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerCallback" id="_registerCallback">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerCallback">#</a>
+		<code><a href="source-class-YiiAMQP.html#246-257" title="Go to source code">registerCallback</a>( <span>function <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register a call back function that is called when a message is received</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register a call back function that is called when a message is received</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>function</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="server" id="$server">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#34" title="Go to source code"><var>$server</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$server" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="connection" id="$connection">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#35" title="Go to source code"><var>$connection</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$connection" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel" id="$channel">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#36" title="Go to source code"><var>$channel</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$channel" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue" id="$queue">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#37" title="Go to source code"><var>$queue</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$queue" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange" id="$exchange">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#38" title="Go to source code"><var>$exchange</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$exchange" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="managementQueue" id="$managementQueue">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#39" title="Go to source code"><var>$managementQueue</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$managementQueue" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="managementExchange" id="$managementExchange">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#40" title="Go to source code"><var>$managementExchange</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$managementExchange" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="managementCallback" id="$managementCallback">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-YiiAMQP.html#41" title="Go to source code"><var>$managementCallback</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$managementCallback" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		YiiAMQP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

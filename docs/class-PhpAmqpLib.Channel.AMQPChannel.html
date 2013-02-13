@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class PhpAmqpLib\Channel\AMQPChannel | YiiAMQP</title>
+
+	<script type="text/javascript" src="resources/combined.js?709491018"></script>
+	<script type="text/javascript" src="elementlist.js?2810205929"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpAmqpLib.html">PhpAmqpLib<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpAmqpLib.Channel.html">Channel</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Connection.html">Connection</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Helper.Protocol.html">Protocol</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpAmqpLib.Message.html">Message</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Functional.html">Functional</a>
+						</li>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.html">Unit<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpAmqpLib.Tests.Unit.Helper.Writer.html">Writer</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpAmqpLib.Wire.html">Wire</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpAmqpLib.Channel.AbstractChannel.html">AbstractChannel</a></li>
+				<li class="active"><a href="class-PhpAmqpLib.Channel.AMQPChannel.html">AMQPChannel</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpAmqpLib.Channel.html" title="Summary of PhpAmqpLib\Channel"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class AMQPChannel</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html"><span>PhpAmqpLib\Channel\AbstractChannel</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>PhpAmqpLib\Channel\AMQPChannel</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PhpAmqpLib.html">PhpAmqpLib</a>\<a href="namespace-PhpAmqpLib.Channel.html">Channel</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#9-785" title="Go to source code">PhpAmqpLib/Channel/AMQPChannel.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#25-47" title="Go to source code">__construct</a>( <span><code><a href="class-PhpAmqpLib.Connection.AMQPConnection.html">PhpAmqpLib\Connection\AMQPConnection</a></code> <var>$connection</var></span>, <span>mixed <var>$channel_id</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$auto_decode</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code><code><a href="class-PhpAmqpLib.Connection.AMQPConnection.html">PhpAmqpLib\Connection\AMQPConnection</a></code></code><br>$connection</dd>
+					<dt><var>$channel_id</var></dt>
+					<dd><code>mixed</code><br>$channel_id</dd>
+					<dt><var>$auto_decode</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-PhpAmqpLib.Channel.AbstractChannel.html#___construct">PhpAmqpLib\Channel\AbstractChannel::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#49-53" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="do_close" id="_do_close">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_do_close">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#55-63" title="Go to source code">do_close</a>( )</code>
+
+		<div class="description short">
+			
+<p>Tear down this object, after we've agreed to close with the server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Tear down this object, after we've agreed to close with the server.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel_alert" id="_channel_alert">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channel_alert">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#65-81" title="Go to source code">channel_alert</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Only for AMQP0.8.0 This method allows the server to send a non-fatal warning
+to the client. This is used for methods that are normally asynchronous and thus
+do not have confirmations, and for which the server may detect errors that need
+to be reported. Fatal errors are handled as channel or connection exceptions;
+non- fatal errors are sent through this method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Only for AMQP0.8.0 This method allows the server to send a non-fatal warning
+to the client. This is used for methods that are normally asynchronous and thus
+do not have confirmations, and for which the server may detect errors that need
+to be reported. Fatal errors are handled as channel or connection exceptions;
+non- fatal errors are sent through this method.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#83-102" title="Go to source code">close</a>( <span>mixed <var>$reply_code</var> = <span class="php-num">0</span></span>, <span>mixed <var>$reply_text</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$method_sig</var> = <span class="php-keyword1">array</span>(<span class="php-num">0</span>, <span class="php-num">0</span>)</span> )</code>
+
+		<div class="description short">
+			
+<p>request a channel close</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>request a channel close</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel_close" id="_channel_close">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channel_close">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#105-117" title="Go to source code">channel_close</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel_close_ok" id="_channel_close_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channel_close_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#119-125" title="Go to source code">channel_close_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm a channel close</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm a channel close</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flow" id="_flow">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flow">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#127-138" title="Go to source code">flow</a>( <span>mixed <var>$active</var></span> )</code>
+
+		<div class="description short">
+			
+<p>enable/disable flow from peer</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>enable/disable flow from peer</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel_flow" id="_channel_flow">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channel_flow">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#140-144" title="Go to source code">channel_flow</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="x_flow_ok" id="_x_flow_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_x_flow_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#146-150" title="Go to source code">x_flow_ok</a>( <span>mixed <var>$active</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel_flow_ok" id="_channel_flow_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channel_flow_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#152-155" title="Go to source code">channel_flow_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="x_open" id="_x_open">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_x_open">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#157-169" title="Go to source code">x_open</a>( <span>mixed <var>$out_of_band</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channel_open_ok" id="_channel_open_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channel_open_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#171-177" title="Go to source code">channel_open_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="access_request" id="_access_request">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_access_request">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#179-193" title="Go to source code">access_request</a>( <span>mixed <var>$realm</var></span>, <span>mixed <var>$exclusive</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$passive</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$active</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$write</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$read</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>request an access ticket</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>request an access ticket</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="access_request_ok" id="_access_request_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_access_request_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#195-203" title="Go to source code">access_request_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>grant access to server resources</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>grant access to server resources</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_declare" id="_exchange_declare">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_declare">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#206-237" title="Go to source code">exchange_declare</a>( <span>mixed <var>$exchange</var></span>, <span>mixed <var>$type</var></span>, <span>mixed <var>$passive</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$durable</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$auto_delete</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$internal</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>declare exchange, create if needed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>declare exchange, create if needed</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_declare_ok" id="_exchange_declare_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_declare_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#239-244" title="Go to source code">exchange_declare_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirms an exchange declaration</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirms an exchange declaration</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_delete" id="_exchange_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_delete">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#246-261" title="Go to source code">exchange_delete</a>( <span>mixed <var>$exchange</var></span>, <span>mixed <var>$if_unused</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>delete an exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>delete an exchange</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_delete_ok" id="_exchange_delete_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_delete_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#263-268" title="Go to source code">exchange_delete_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm deletion of an exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm deletion of an exchange</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_bind" id="_exchange_bind">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_bind">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#270-288" title="Go to source code">exchange_bind</a>( <span>mixed <var>$destination</var></span>, <span>mixed <var>$source</var></span>, <span>mixed <var>$routing_key</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>bind dest exchange to source exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>bind dest exchange to source exchange</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_bind_ok" id="_exchange_bind_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_bind_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#290-295" title="Go to source code">exchange_bind_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm bind successful</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm bind successful</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_unbind" id="_exchange_unbind">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_unbind">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#297-313" title="Go to source code">exchange_unbind</a>( <span>mixed <var>$source</var></span>, <span>mixed <var>$destination</var></span>, <span>mixed <var>$routing_key</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>unbind dest exchange from source exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>unbind dest exchange from source exchange</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exchange_unbind_ok" id="_exchange_unbind_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exchange_unbind_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#315-320" title="Go to source code">exchange_unbind_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm unbind successful</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm unbind successful</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_bind" id="_queue_bind">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_bind">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#323-341" title="Go to source code">queue_bind</a>( <span>mixed <var>$queue</var></span>, <span>mixed <var>$exchange</var></span>, <span>mixed <var>$routing_key</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>bind queue to an exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>bind queue to an exchange</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_bind_ok" id="_queue_bind_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_bind_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#343-348" title="Go to source code">queue_bind_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm bind successful</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm bind successful</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_unbind" id="_queue_unbind">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_unbind">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#350-366" title="Go to source code">queue_unbind</a>( <span>mixed <var>$queue</var></span>, <span>mixed <var>$exchange</var></span>, <span>mixed <var>$routing_key</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>unbind queue from an exchange</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>unbind queue from an exchange</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_unbind_ok" id="_queue_unbind_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_unbind_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#368-373" title="Go to source code">queue_unbind_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm unbind successful</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm unbind successful</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_declare" id="_queue_declare">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_declare">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#375-402" title="Go to source code">queue_declare</a>( <span>mixed <var>$queue</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$passive</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$durable</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$exclusive</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$auto_delete</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>declare queue, create if needed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>declare queue, create if needed</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_declare_ok" id="_queue_declare_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_declare_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#404-414" title="Go to source code">queue_declare_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirms a queue definition</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirms a queue definition</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_delete" id="_queue_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_delete">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#416-433" title="Go to source code">queue_delete</a>( <span>mixed <var>$queue</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$if_unused</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$if_empty</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>delete a queue</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>delete a queue</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_delete_ok" id="_queue_delete_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_delete_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#435-441" title="Go to source code">queue_delete_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm deletion of a queue</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm deletion of a queue</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_purge" id="_queue_purge">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_purge">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#443-458" title="Go to source code">queue_purge</a>( <span>mixed <var>$queue</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>purge a queue</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>purge a queue</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queue_purge_ok" id="_queue_purge_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queue_purge_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#460-466" title="Go to source code">queue_purge_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirms a queue purge</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirms a queue purge</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_ack" id="_basic_ack">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_ack">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#468-475" title="Go to source code">basic_ack</a>( <span>mixed <var>$delivery_tag</var></span>, <span>mixed <var>$multiple</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>acknowledge one or more messages</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>acknowledge one or more messages</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_nack" id="_basic_nack">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_nack">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#477-484" title="Go to source code">basic_nack</a>( <span>mixed <var>$delivery_tag</var></span>, <span>mixed <var>$multiple</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$requeue</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>reject one or several received messages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>reject one or several received messages.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_cancel" id="_basic_cancel">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_cancel">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#486-497" title="Go to source code">basic_cancel</a>( <span>mixed <var>$consumer_tag</var></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>end a queue consumer</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>end a queue consumer</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_cancel_ok" id="_basic_cancel_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_cancel_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#499-506" title="Go to source code">basic_cancel_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm a cancelled consumer</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm a cancelled consumer</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_consume" id="_basic_consume">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_consume">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#508-533" title="Go to source code">basic_consume</a>( <span>mixed <var>$queue</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$consumer_tag</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$no_local</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$no_ack</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$exclusive</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$nowait</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>start a queue consumer</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>start a queue consumer</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_consume_ok" id="_basic_consume_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_consume_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#535-541" title="Go to source code">basic_consume_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm a new consumer</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm a new consumer</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_deliver" id="_basic_deliver">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_deliver">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#543-572" title="Go to source code">basic_deliver</a>( <span>mixed <var>$args</var></span>, <span>mixed <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>notify the client of a consumer message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>notify the client of a consumer message</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_get" id="_basic_get">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_get">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#574-588" title="Go to source code">basic_get</a>( <span>mixed <var>$queue</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$no_ack</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>direct access to a queue</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>direct access to a queue</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_get_empty" id="_basic_get_empty">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_get_empty">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#590-596" title="Go to source code">basic_get_empty</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>indicate no messages available</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>indicate no messages available</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_get_ok" id="_basic_get_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_get_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#598-618" title="Go to source code">basic_get_ok</a>( <span>mixed <var>$args</var></span>, <span>mixed <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>provide client with a message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>provide client with a message</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_publish" id="_basic_publish">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_publish">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#620-637" title="Go to source code">basic_publish</a>( <span>mixed <var>$msg</var></span>, <span>mixed <var>$exchange</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$routing_key</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>mixed <var>$mandatory</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$immediate</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$ticket</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>publish a message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>publish a message</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_qos" id="_basic_qos">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_qos">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#639-650" title="Go to source code">basic_qos</a>( <span>mixed <var>$prefetch_size</var></span>, <span>mixed <var>$prefetch_count</var></span>, <span>mixed <var>$a_global</var></span> )</code>
+
+		<div class="description short">
+			
+<p>specify quality of service</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>specify quality of service</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_qos_ok" id="_basic_qos_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_qos_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#652-657" title="Go to source code">basic_qos_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm the requested qos</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm the requested qos</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_recover" id="_basic_recover">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_recover">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#659-670" title="Go to source code">basic_recover</a>( <span>mixed <var>$requeue</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>redeliver unacknowledged messages</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>redeliver unacknowledged messages</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_recover_ok" id="_basic_recover_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_recover_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#672-677" title="Go to source code">basic_recover_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm the requested recover</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm the requested recover</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_reject" id="_basic_reject">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_reject">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#679-686" title="Go to source code">basic_reject</a>( <span>mixed <var>$delivery_tag</var></span>, <span>mixed <var>$requeue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>reject an incoming message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>reject an incoming message</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_return" id="_basic_return">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic_return">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#688-709" title="Go to source code">basic_return</a>( <span>mixed <var>$args</var></span>, <span>mixed <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>return a failed message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>return a failed message</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tx_commit" id="_tx_commit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tx_commit">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#710-717" title="Go to source code">tx_commit</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tx_commit_ok" id="_tx_commit_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tx_commit_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#719-724" title="Go to source code">tx_commit_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm a successful commit</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm a successful commit</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tx_rollback" id="_tx_rollback">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tx_rollback">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#726-736" title="Go to source code">tx_rollback</a>( )</code>
+
+		<div class="description short">
+			
+<p>abandon the current transaction</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>abandon the current transaction</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tx_rollback_ok" id="_tx_rollback_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tx_rollback_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#738-743" title="Go to source code">tx_rollback_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm a successful rollback</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm a successful rollback</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tx_select" id="_tx_select">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tx_select">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#745-755" title="Go to source code">tx_select</a>( )</code>
+
+		<div class="description short">
+			
+<p>select standard transaction mode</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>select standard transaction mode</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tx_select_ok" id="_tx_select_ok">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tx_select_ok">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#757-762" title="Go to source code">tx_select_ok</a>( <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>confirm transaction mode</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>confirm transaction mode</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArguments" id="_getArguments">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArguments">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#764-767" title="Go to source code">getArguments</a>( <span>mixed <var>$arguments</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTicket" id="_getTicket">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTicket">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#769-772" title="Go to source code">getTicket</a>( <span>mixed <var>$ticket</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_return_listener" id="_set_return_listener">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_return_listener">#</a>
+		<code><a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#773-784" title="Go to source code">set_return_listener</a>( <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>set callback for basic_return</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>set callback for basic_return</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if $callback is not callable<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-PhpAmqpLib.Channel.AbstractChannel.html#methods">PhpAmqpLib\Channel\AbstractChannel</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#_dispatch">dispatch()</a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#_getChannelId">getChannelId()</a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#_next_frame">next_frame()</a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#_send_method_frame">send_method_frame()</a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#_wait">wait()</a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#_wait_content">wait_content()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="callbacks" id="$callbacks">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#11" title="Go to source code"><var>$callbacks</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$callbacks" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_return_callback" id="$basic_return_callback">
+		<td class="attributes"><code>
+			protected  
+			callable
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpAmqpLib.Channel.AMQPChannel.html#13-23" title="Go to source code"><var>$basic_return_callback</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$basic_return_callback" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>these parameters will be passed to function<br />
+in case of basic_return:<br />
+param int $reply_code<br />
+param string $reply_text<br />
+param string $exchange<br />
+param string $routing_key<br />
+param AMQPMessage $msg</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>these parameters will be passed to function in case of basic_return: param
+int $reply_code param string $reply_text param string $exchange param string
+$routing_key param AMQPMessage $msg</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-PhpAmqpLib.Channel.AbstractChannel.html#properties">PhpAmqpLib\Channel\AbstractChannel</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$PROTOCOL_CONSTANTS_CLASS"><var>$PROTOCOL_CONSTANTS_CLASS</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$channel_id"><var>$channel_id</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$connection"><var>$connection</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$debug"><var>$debug</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$methodMap"><var>$methodMap</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$protocolVersion"><var>$protocolVersion</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$protocolWriter"><var>$protocolWriter</var></a>, 
+			<a href="class-PhpAmqpLib.Channel.AbstractChannel.html#$waitHelper"><var>$waitHelper</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		YiiAMQP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
