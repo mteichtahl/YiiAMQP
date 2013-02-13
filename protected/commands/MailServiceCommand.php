@@ -39,9 +39,7 @@ class MailServiceCommand extends CConsoleCommand {
     private $mailTransport;
     private $mailer;
     private $messageCount = 0;
-    
     public $id;
-    
 
     public static function getInstance() {
         if (!isset(static::$instance)) {
@@ -59,17 +57,50 @@ class MailServiceCommand extends CConsoleCommand {
         Yii::app()->autoloader->getAutoloader()->addClass('swift', __DIR__ . '/../vendors/Swift-4.3.0/lib');
     }
 
+    public function actionTest($load=10) {
+        Yii::log('[' . get_class() . '] [#' . $this->id . '] Starting Mail Service Test', 'info');
+
+        Yii::app()->rabbitMQ->createConnection();
+        Yii::app()->rabbitMQ->declareQueue('mail');
+        Yii::app()->rabbitMQ->declareExchange('exchange.mailService', 'topic');
+        Yii::app()->rabbitMQ->bind('mail', 'exchange.mailService', 'mail');
+        Yii::app()->rabbitMQ->setQoS('0', '1', '0');
+
+        $message = array(
+            'requestType' => 'mail',
+            'request' => array(
+                'to' => 'admin@dummy.com',
+                'body' => 'TEST',
+                'from' => array(
+                    'email' => 'root@dummt.com',
+                    'name' => 'Marc Teichtahl'
+                ),
+                'replyTo' => 'marc@teichtahl.com',
+                'subject' => 'Test',
+                'test' => 'true'
+            )
+        );
+        
+        
+        for ($i=0; $i<=$load; $i++) {
+            sleep(1);
+            Yii::app()->rabbitMQ->sendJSONMessage(CJSON::encode($message), 'mail');
+            Yii::log('[' . get_class() . '] [#' . $this->id . '] Sent mail #'.$i, 'info');
+            echo '.';
+        }
+    }
+
     public function actionStart() {
         Yii::log('[' . get_class() . '] [#' . $this->id . '] Starting Mail Service....', 'info');
 
         Yii::app()->rabbitMQ->createConnection();
-       
+
         $queue = Yii::app()->rabbitMQ->declareQueue('mail');
 
         Yii::app()->rabbitMQ->declareExchange('exchange.mailService', 'topic');
         Yii::app()->rabbitMQ->bind($queue, 'exchange.mailService', 'mail');
         Yii::app()->rabbitMQ->setQoS('0', '1', '0');
-        
+
         Yii::app()->rabbitMQ->registerCallback(array($this, 'myCallback'));
         Yii::app()->rabbitMQ->consume($queue, $this->id);
         Yii::app()->rabbitMQ->wait();
@@ -115,9 +146,7 @@ class MailServiceCommand extends CConsoleCommand {
         $deliveryTag = $msg->delivery_info['delivery_tag'];
         $channel = $msg->delivery_info['channel'];
 
-        $mailTransport = Swift_SmtpTransport::newInstance(Yii::app()->params['smtpServer'], 
-                                                          Yii::app()->params['smtpPort'], 
-                                                          Yii::app()->params['smtpConn'])
+        $mailTransport = Swift_SmtpTransport::newInstance(Yii::app()->params['smtpServer'], Yii::app()->params['smtpPort'], Yii::app()->params['smtpConn'])
                 ->setUsername(Yii::app()->params['smtpUsername'])
                 ->setPassword(Yii::app()->params['smtpPassword']);
 
@@ -126,6 +155,7 @@ class MailServiceCommand extends CConsoleCommand {
         $message = Swift_Message::newInstance();
         $message->setSubject($val->request->subject);
         $message->setTo($val->request->to);
+        $message->setContentType("text/html");
         $message->setFrom(array($val->request->from->email => $val->request->from->name));
         $message->setBody($val->request->body, 'text/html'); //body html
 
@@ -135,13 +165,13 @@ class MailServiceCommand extends CConsoleCommand {
         Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Mail queued -  ' . trim($headers->get('Message-ID')), 'info');
 
         $startTime = microtime(true);
-        
-        if ($val->request->test=='true')
-        {
+
+        if ($val->request->test == 'true') {
             Yii::log('[' . get_class() . '] [#' . $mailService->id . '] [' . $msg->get('exchange') . '] Message NOT send - Test Requested - ' . trim($headers->get('Message-ID')), 'info');
+            $msg->delivery_info['channel']->basic_ack($deliveryTag);
             return;
         }
-        
+
         if ($mailer->send($message) == 1) {
             $msg->delivery_info['channel']->basic_ack($deliveryTag);
             $totalTime = microtime(true) - $startTime;
@@ -156,9 +186,9 @@ class MailServiceCommand extends CConsoleCommand {
     }
 
     protected function processInfoRequest($val, $msg) {
-        
+
         $msg->delivery_info['channel']->basic_ack($deliveryTag);
-        
+
         $mailService = MailServiceCommand::getInstance();
 
         $deliveryTag = $msg->delivery_info['delivery_tag'];
@@ -172,8 +202,6 @@ class MailServiceCommand extends CConsoleCommand {
         Yii::log('     - Exchange: ' . $msg->get('exchange'));
         Yii::log('     - Channel: ' . Yii::app()->rabbitMQ->getChannelId());
         Yii::log('     - Messages Received: ' . $mailService->messageCount);
-
-        
     }
 
     private function generateRandomString($length = 10) {
