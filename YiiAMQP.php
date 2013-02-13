@@ -334,12 +334,8 @@ class YiiAMQP extends CApplicationComponent {
      *
      * */
     public function getExchanges() {
+       
         
-        $description = ServiceDescription::factory('/path/to/client.json');
-        
-        print_r($description);
-        
-        app()->end();
         
         $ch = curl_init();
 
