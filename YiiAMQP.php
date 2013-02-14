@@ -318,7 +318,14 @@ class YiiAMQP extends CApplicationComponent {
      * */
     public function getRabbitMQInfo() {
 
-        $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
+        try {
+            $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
+        } catch (CurlException $e)
+        {
+             echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+        
+        
         
         $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
         $this->client->setDescription($description);
