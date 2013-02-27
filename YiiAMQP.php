@@ -17,7 +17,7 @@ namespace YiiAMQP {
     
     spl_autoload_unregister(array('EAutoloader','autoload'));
     require_once('vendor/autoload.php');
-    spl_autoload_register(array('EAutoloader','autoload'));
+    //spl_autoload_register(array('EAutoloader','autoload'));
 
 
     \Yii::app()->autoloader->getAutoloader()->addNamespace('PhpAmqpLib\Connection', __DIR__ . '/PhpAmqpLib/Connection');
@@ -194,7 +194,7 @@ namespace YiiAMQP {
          * 
          */
         public function sendTextMessage($msg, $routingKey = '') {
-            $message = new PhpAmqpLib\Message\AMQPMessage($msg, array('content_type' => 'text/plain', 'delivery_mode' => 2));
+            $message = new \PhpAmqpLib\Message\AMQPMessage($msg, array('content_type' => 'text/plain', 'delivery_mode' => 2));
             $this->channel->basic_publish($message, $this->exchange, $routingKey);
         }
 
@@ -206,7 +206,7 @@ namespace YiiAMQP {
          * 
          */
         public function sendJSONMessage($msg, $routingKey = '') {
-            $message = new PhpAmqpLib\Message\AMQPMessage($msg, array('content_type' => 'text/JSON', 'delivery_mode' => 2));
+            $message = new \PhpAmqpLib\Message\AMQPMessage($msg, array('content_type' => 'text/JSON', 'delivery_mode' => 2));
             $this->channel->basic_publish($message, $this->exchange, $routingKey);
         }
 
