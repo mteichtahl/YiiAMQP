@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.phar
 
 # Packages #
 ############
@@ -25,6 +26,7 @@
 *.log
 *.sql
 *.sqlite
+*.lock
 
 # OS generated files #
 ######################
@@ -41,3 +43,6 @@ Thumbs.db
 ##############################
 *.neon
 
+# ignore locally installed composer dependencies #
+##################################################
+vendor/
