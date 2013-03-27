@@ -41,6 +41,15 @@ Configure your application to use this component by adding and updating to match
         ),
 ```
 
+Due to the introduction of the YiiAMQP namespace the following must be added to the configuration file
+either main.php or console.php to ensure Yii has knowledge of the namespace.
+
+```php
+
+Yii::setPathOfAlias('YiiAMQP', DIR.'/../components/YiiAMQP');
+
+```
+
 ##Usage
 
 ### Producer
