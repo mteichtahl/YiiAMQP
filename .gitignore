@@ -50,3 +50,4 @@ protected/runtime
 # ignore locally installed composer dependencies #
 ##################################################
 vendor/
+composer.phar
