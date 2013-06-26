@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php" : ">=5.4.0",
-        "guzzle/guzzle": "~3.1.1"
+        "guzzle/guzzle": "~3.7"
     },
     "autoload": {
         "psr-0": {
