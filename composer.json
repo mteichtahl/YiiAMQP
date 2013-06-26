@@ -1,5 +1,5 @@
 {
-    "name" : "amplifier/YiiAMQP",
+    "name" : "amplifier/yii-amqp",
     "require": {
         "php" : ">=5.4.0",
         "guzzle/guzzle": "~3.1.1"
