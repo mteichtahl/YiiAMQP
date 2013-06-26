@@ -7,9 +7,6 @@ YiiAMQP is a fully functional AMQP producer and conusumer Yii application compon
 
 Tested with Yii version 1.1.13
 
-### Documentation
-
-Refer to docs/class-YiiAMQP.html for details on the component methods
 
 ##Quick Start
 
@@ -72,8 +69,6 @@ If you find any bugs, please create an issue at [https://github.com/mteichtahl/Y
 
 ##Credits
 
-- gaAutoLoader [https://gist.github.com/mindplay-dk/4234540] Rasmus Schultz
-- CPSLiveLogRoute [http://www.pogostick.com] Jerry Ablan jablan@pogostick.com
 - php-amqplib [https://github.com/videlalvaro/php-amqplib] Vadim Zaliva lord@crocodile.org
 - rabbitMQ [http://www.rabbitmq.com/] VMWare
 
