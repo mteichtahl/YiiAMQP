@@ -1,0 +1,62 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.phar
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.lock
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+<<<<<<< HEAD
+# Application log files
+protected/runtime
+=======
+# ignore documentation .neon #
+##############################
+*.neon
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 83363cde857ecc88d494fb36dd2f337d5367904e
+=======
+# ignore locally installed composer dependencies #
+##################################################
+vendor/
+>>>>>>> a1d8939889d9f84d8790fcb2e830e25f58d68e69
+=======
+# ignore locally installed composer dependencies #
+##################################################
+vendor/
+>>>>>>> 6eddfd847dd526d63b48afa748234769f2626e05
