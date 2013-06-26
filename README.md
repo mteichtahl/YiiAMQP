@@ -24,6 +24,18 @@ Refer to docs/class-YiiAMQP.html for details on the component methods
 ##Quick Start
 Clone the repo, `git clone git://github.com/mteichtahl/YiiAMQP.git`, or [download the latest release](https://github.com/mteichtahl/YiiAMQP/zipball/master).
 
+We have provided a prebuilt composer.json which will include the required Guzzle dependency and ensure the proper configuration
+of the namespaces.
+
+Install composer and install the dependencies.
+
+```
+curl -s http://getcomposer.org/installer | php && ./composer.phar install
+
+```
+
+
+
 Configure your application to use this component by adding and updating to match your needs the following configuration
 
 ```php
