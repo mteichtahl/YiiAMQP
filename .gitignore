@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.phar
 
 # Packages #
 ############
@@ -25,6 +26,7 @@
 *.log
 *.sql
 *.sqlite
+*.lock
 
 # OS generated files #
 ######################
@@ -45,4 +47,10 @@ protected/runtime
 ##############################
 *.neon
 
+<<<<<<< HEAD
 >>>>>>> 83363cde857ecc88d494fb36dd2f337d5367904e
+=======
+# ignore locally installed composer dependencies #
+##################################################
+vendor/
+>>>>>>> a1d8939889d9f84d8790fcb2e830e25f58d68e69
