@@ -9,8 +9,8 @@
     },
     "autoload": {
         "psr-0": {
-            "YiiAMQP\\Guzzle\\Tests": "guzzle/guzzle/tests/",
-            "YiiAMQP\\Guzzle": "guzzle/guzzle/src/"
+            "YiiAMQP\\Guzzle\\Tests": "/guzzle/guzzle/tests/",
+            "YiiAMQP\\Guzzle": "/guzzle/guzzle/src/"
         }
     }
 }
