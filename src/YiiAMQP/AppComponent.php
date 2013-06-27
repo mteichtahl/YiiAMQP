@@ -86,7 +86,7 @@ class AppComponent extends \CApplicationComponent {
             return false;
         }
 
-        \Yii::log('[' . get_class() . '] Channel ' . $this->channel->getChannelId . ' created', 'info');
+        \Yii::log('[' . get_class() . '] Channel ' . $this->channel->getChannelId() . ' created', 'info');
 
         $this->managementExchange = $this->declareExchange('exchange.management', 'fanout');
 
