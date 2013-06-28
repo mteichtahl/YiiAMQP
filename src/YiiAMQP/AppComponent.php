@@ -37,8 +37,15 @@ class AppComponent extends \CApplicationComponent {
     public $managementQueue;
     public $managementExchange;
     public $managementCallback;
+
+    public $exchangeName;
+    public $exchangeType;
+    public $queueName;
+	
     private $callback;
     private $client;
+
+
 
     /**
      * Creates a connection to a rabbitMQ server
