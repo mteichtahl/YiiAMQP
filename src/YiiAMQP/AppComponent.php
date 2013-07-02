@@ -15,8 +15,6 @@
 
 namespace YiiAMQP;
 
-
-
 /**
  * YiiAMQP
  *
@@ -37,15 +35,11 @@ class AppComponent extends \CApplicationComponent {
     public $managementQueue;
     public $managementExchange;
     public $managementCallback;
-
     public $exchangeName;
     public $exchangeType;
     public $queueName;
-	
     private $callback;
     private $client;
-
-
 
     /**
      * Creates a connection to a rabbitMQ server
@@ -272,9 +266,11 @@ class AppComponent extends \CApplicationComponent {
 
         $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
 
-//$description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
-//$this->client->setDescription($description);
+        $description = \Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
+        $this->client->setDescription($description);
+        $authPlugin = new \Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
 
+        $this->client->addSubscriber($authPlugin);
 
 
         $command = $this->client->getCommand('overview');
@@ -294,11 +290,11 @@ class AppComponent extends \CApplicationComponent {
 
         $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
 
-//        $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
-//        $this->client->setDescription($description);
-//            $authPlugin = new Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
-//
-//            $this->client->addSubscriber($authPlugin);
+        $description = \Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
+        $this->client->setDescription($description);
+        $authPlugin = new \Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
+
+        $this->client->addSubscriber($authPlugin);
 
         $command = $this->client->getCommand('exchanges');
 
@@ -314,11 +310,11 @@ class AppComponent extends \CApplicationComponent {
     public function getQueues() {
         $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
 
-//        $description = Guzzle\Service\Description\ServiceDescription::factory(__DIR__.'/rabbitMQ.json');
-//        $this->client->setDescription($description);
-//            $authPlugin = new Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
-//
-//            $this->client->addSubscriber($authPlugin);
+        $description = \Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
+        $this->client->setDescription($description);
+        $authPlugin = new \Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
+
+        $this->client->addSubscriber($authPlugin);
 
         $command = $this->client->getCommand('queues');
 

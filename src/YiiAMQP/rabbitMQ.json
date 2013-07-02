@@ -1,7 +1,7 @@
 {
     "name": "rabbitMQ API Interface",
     "apiVersion": "2013-07-03",
-    "baseUrl": "http://rabbitmq:15672/",
+    "baseUrl": "http://adapptrmq:15672/",
     "description": "API Description for RabbitMQ",
     "operations": {
         "overview": {
