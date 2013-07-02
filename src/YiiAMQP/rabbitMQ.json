@@ -1,8 +1,8 @@
 {
     "name": "rabbitMQ API Interface",
-    "apiVersion": "2012-10-14",
-    "baseUrl": "http://localhost:15672/",
-    "description": "Foo is an API that allows you to Baz Bar",
+    "apiVersion": "2013-07-03",
+    "baseUrl": "http://rabbitmq:15672/",
+    "description": "API Description for RabbitMQ",
     "operations": {
         "overview": {
             "httpMethod": "GET",
