@@ -15,9 +15,9 @@ Install via composer, then configure your application to use this component by a
 ```php
 
 'components' => array(
-        'rabbitMQ' => array(
-            'class' => 'YiiAMQP\AppComponent',
-            'server' => array(
+        'mq' => array(
+            'class' => 'YiiAMQP\Client',
+            'connection' => array(
                 'host' => 'localhost',
                 'port' => '5672',
                 'vhost' => '/',
@@ -33,13 +33,8 @@ Install via composer, then configure your application to use this component by a
 ### Producer
 
 ```php
-Yii::app()->rabbitMQ->createConnection();
-Yii::app()->rabbitMQ->declareQueue('mail');
-Yii::app()->rabbitMQ->declareExchange('exchange.mailService', 'topic');
-Yii::app()->rabbitMQ->bind('mail', 'exchange.mailService', 'mail');
-Yii::app()->rabbitMQ->setQoS('0', '1', '0');
-Yii::app()->rabbitMQ->sendJSONMessage('"test":"test"','mail');
-Yii::app()->rabbitMQ->sendTextMessage('text message"','mail');
+$myMessage = array('greeting' => 'Hello World');
+Yii::app()->mq->exchanges->greeter->send($myMessage); // will be JSON encoded
 ```
 
 ### Consumer
@@ -47,19 +42,11 @@ Yii::app()->rabbitMQ->sendTextMessage('text message"','mail');
 Initialise the component
 
 ```php
-Yii::app()->rabbitMQ->declareExchange('exchange.mailService', 'topic');
-Yii::app()->rabbitMQ->bind($queue, 'exchange.mailService', 'mail');
-Yii::app()->rabbitMQ->setQoS('0', '1', '0');
-Yii::app()->rabbitMQ->registerCallback(array($this, 'myCallback'));
-Yii::app()->rabbitMQ->consume($queue, $this->id);
-Yii::app()->rabbitMQ->wait();
-```
 
-Create the callback function
+Yii::app()->mq->defaultQueue->consume(function($message){ print_r($message); });
+Yii::app()->mq->queues->myQueue->consume(function($message){ print_r($message); });
+Yii::app()->mq->wait(); // wait for results
 
-```php
-public static function myCallback($msg) { }
-```
 
 ##Contributing
 Please submit all pull requests against *-wip branches. Thanks!
@@ -73,5 +60,6 @@ If you find any bugs, please create an issue at [https://github.com/mteichtahl/Y
 - rabbitMQ [http://www.rabbitmq.com/] VMWare
 
 ##License
-[![License](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)
-This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)
+
+
+MIT.
