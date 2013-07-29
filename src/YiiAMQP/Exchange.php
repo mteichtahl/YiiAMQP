@@ -56,10 +56,19 @@ class Exchange extends \CComponent
     public $vhost = '/';
 
     /**
+     * @var null|string the default routing key for the exchange
+     */
+    public $routingKey = null;
+
+    /**
      * @var Client the AMQP connection this exchange belongs to
      */
     protected $_client;
 
+    /**
+     * @var Queue the queue to bind to
+     */
+    protected $_queue;
 
     /**
      * @var bool whether or not the exchange has been initialized
@@ -91,8 +100,6 @@ class Exchange extends \CComponent
         return $this->_client;
     }
 
-
-
     /**
      * @param boolean $isInitialized
      */
@@ -109,6 +116,25 @@ class Exchange extends \CComponent
         return $this->_isInitialized;
     }
 
+    /**
+     * @param \YiiAMQP\Queue $queue
+     */
+    public function setQueue($queue)
+    {
+        if (is_string($queue))
+            $queue = $this->getClient()->getQueues()->itemAt($queue);
+        $this->_queue = $queue;
+    }
+
+    /**
+     * @return \YiiAMQP\Queue
+     */
+    public function getQueue()
+    {
+        if ($this->_queue === null)
+            $this->_queue = $this->getClient()->getDefaultQueue();
+        return $this->_queue;
+    }
 
     /**
      * Initializes the exchange.
@@ -118,15 +144,18 @@ class Exchange extends \CComponent
     {
         if ($this->getIsInitialized())
             return;
-        $this->getClient()->getChannel()->exchange_declare(
+        $client = $this->getClient();
+        $client->getChannel()->exchange_declare(
             $this->name,
             $this->type,
             $this->isPassive,
             $this->isDurable,
             $this->autoDelete
         );
+        $this->getQueue()->bind($this, $this->routingKey);
         $this->setIsInitialized(true);
     }
+
 
     /**
      * Send the given message
@@ -136,6 +165,8 @@ class Exchange extends \CComponent
     public function send($message, $routingKey = null)
     {
         $this->init();
+        if ($routingKey === null)
+            $routingKey = $this->routingKey;
         if (!($message instanceof AMQPMessage))
             $message = $this->createMessage($message);
         $this->getClient()->getChannel()->basic_publish($message, $this->name, $routingKey);

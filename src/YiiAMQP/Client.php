@@ -234,6 +234,21 @@ class Client extends \CApplicationComponent
     }
 
     /**
+     * Gets the default queue for the application
+     * @return Queue
+     */
+    public function getDefaultQueue()
+    {
+        return $this->getQueues()->itemAt($this->defaultQueueName);
+    }
+
+    public function setDefaultQueue($queue)
+    {
+        if (!($queue instanceof Queue))
+            $queue = $this->getQueues()->createQueue($queue);
+    }
+
+    /**
      * Create a collection of queues for this connection
      * @param array $data the data for the queues, if any.
      *
