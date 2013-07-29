@@ -58,6 +58,21 @@ class QueueCollection extends \CAttributeCollection
     }
 
     /**
+     * @inheritDoc
+     */
+    public function add($key, $value)
+    {
+        if (!($value instanceof Queue))
+            $value = $this->createQueue($key, $value);
+        else {
+            $value->name = $key;
+            $value->setClient($this->getClient());
+        }
+        parent::add($key, $value);
+    }
+
+
+    /**
      * Override the parent implementation since the collection creates items on demand.
      * @param string $key the queue name to check
      *
@@ -69,15 +84,18 @@ class QueueCollection extends \CAttributeCollection
     }
 
     /**
-     * Creates an queue for the collection
+     * Creates a queue for the collection
      *
      * @param string $name the name of the queue to create
+     * @param array $config the queue configuration
      *
      * @return Queue the queue instance
      */
-    protected function createQueue($name)
+    public function createQueue($name, $config = array())
     {
         $queue = new Queue();
+        foreach($config as $key => $value)
+            $queue->{$key} = $value;
         $queue->name = $name;
         $queue->setClient($this->getClient());
         return $queue;
