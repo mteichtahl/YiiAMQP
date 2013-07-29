@@ -158,7 +158,7 @@ class Queue extends \CComponent
     /**
      * Registers a callback that can consume messages on the queue.
      *
-     * @param callable $callback the callback to invoke when messages are received
+     * @param AbstractConsumer|callable $callback the consumer or callback to invoke when messages are received
      * @param string $tag Specifies the identifier for the consumer. The consumer tag is
      * local to a channel, so two clients can use the same consumer tags.
      * If this field is empty the server will generate a unique tag.
@@ -171,7 +171,9 @@ class Queue extends \CComponent
      */
     public function consume($callback, $tag = '', $excludeLocal = false, $noAck = false, $isExclusive = true, $noWait = false)
     {
-        if (!is_callable($callback))
+        if ($callback instanceof AbstractConsumer)
+            $callback = array($callback, 'consume');
+        elseif (!is_callable($callback))
             throw new \InvalidArgumentException('First argument to '.__METHOD__.' must be callable!');
         $this->init();
         $this->getClient()->getChannel()->basic_consume(
