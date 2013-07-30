@@ -18,7 +18,7 @@ class Client extends \CApplicationComponent
     /**
      * @var string the name of the default queue to use
      */
-    protected $_defaultQueueName = 'main';
+    protected $_defaultQueueName;
 
     /**
      * @var AbstractMetaClient the meta client for the message queue
