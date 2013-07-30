@@ -18,7 +18,7 @@ class Client extends \CApplicationComponent
     /**
      * @var string the name of the default queue to use
      */
-    public $defaultQueueName = 'main';
+    protected $_defaultQueueName = 'main';
 
     /**
      * @var AbstractMetaClient the meta client for the message queue
@@ -132,6 +132,35 @@ class Client extends \CApplicationComponent
     }
 
     /**
+     * Sets the name of the default queue
+     * @param string $defaultQueueName
+     */
+    public function setDefaultQueueName($defaultQueueName)
+    {
+        $this->_defaultQueueName = $defaultQueueName;
+    }
+
+    /**
+     * Gets the name of the default queue
+     * @return string the default queue name
+     */
+    public function getDefaultQueueName()
+    {
+        if ($this->_defaultQueueName === null)
+            $this->_defaultQueueName = $this->createDefaultQueueName();
+        return $this->_defaultQueueName;
+    }
+
+    /**
+     * Creates a unique default queue name
+     * @return string the default queue name
+     */
+    public function createDefaultQueueName()
+    {
+        return uniqid('queue.', true);
+    }
+
+    /**
      * Sets the meta client for this queue
      * @param AbstractMetaClient $metaClient
      */
@@ -224,6 +253,7 @@ class Client extends \CApplicationComponent
     }
 
     /**
+     * Gets the queues
      * @return \YiiAMQP\QueueCollection
      */
     public function getQueues()
@@ -239,13 +269,18 @@ class Client extends \CApplicationComponent
      */
     public function getDefaultQueue()
     {
-        return $this->getQueues()->itemAt($this->defaultQueueName);
+        return $this->getQueues()->itemAt($this->getDefaultQueueName());
     }
 
+    /**
+     * Sets the default queue
+     * @param array|Queue $queue the queue instance or configuration
+     */
     public function setDefaultQueue($queue)
     {
         if (!($queue instanceof Queue))
             $queue = $this->getQueues()->createQueue($queue);
+        $this->getQueues()->add($this->getDefaultQueueName(), $queue);
     }
 
     /**
@@ -268,7 +303,7 @@ class Client extends \CApplicationComponent
     public function setExchanges($exchanges)
     {
         if ($exchanges instanceof ExchangeCollection)
-            $exchanges->client = $this;
+            $exchanges->setClient($this);
         else
             $exchanges = $this->createExchangeCollection($exchanges);
         $this->_exchanges = $exchanges;
