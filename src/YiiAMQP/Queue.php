@@ -181,7 +181,7 @@ class Queue extends \CComponent
             $tag,
             $excludeLocal,
             $noAck,
-            ($isExclusive === null) ? $this->isExclusive : false,,
+            ($isExclusive === null) ? $this->isExclusive : $isExclusive,
             $noWait,
             $callback
         );
