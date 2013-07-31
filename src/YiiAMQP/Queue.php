@@ -169,7 +169,7 @@ class Queue extends \CComponent
      *
      * @throws \InvalidArgumentException if the callback is not callable
      */
-    public function consume($callback, $tag = '', $excludeLocal = false, $noAck = false, $isExclusive = true, $noWait = false)
+    public function consume($callback, $tag = '', $excludeLocal = false, $noAck = false, $isExclusive = null, $noWait = false)
     {
         if ($callback instanceof AbstractConsumer)
             $callback = array($callback, 'consume');
@@ -181,7 +181,7 @@ class Queue extends \CComponent
             $tag,
             $excludeLocal,
             $noAck,
-            $isExclusive,
+            ($isExclusive === null) ? $this->isExclusive : false,,
             $noWait,
             $callback
         );
