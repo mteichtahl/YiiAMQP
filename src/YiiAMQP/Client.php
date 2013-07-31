@@ -5,6 +5,9 @@ namespace YiiAMQP;
 use PhpAmqpLib\Connection\AMQPConnection;
 use YiiAMQP\Meta\AbstractMetaClient;
 
+define('AMQP_DEBUG', false);
+
+
 /**
  * # AMQP Client
  *
