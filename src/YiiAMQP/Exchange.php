@@ -152,6 +152,11 @@ class Exchange extends \CComponent
             $this->isDurable,
             $this->autoDelete
         );
+        
+         if ($this->routingKey === null)
+             $this->routingKey = $this->name;
+         
+        
         $this->getQueue()->bind($this, $this->routingKey);
         $this->setIsInitialized(true);
     }
