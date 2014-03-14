@@ -103,7 +103,7 @@ class Client extends \CApplicationComponent
      */
     public function getConnectionConfig()
     {
-        if ($this->_connectionConfig === null) {
+        if ($this->_connectionConfig === array()) {
             $this->_connectionConfig = array(
                 'host' => 'localhost',
                 'port' => 5672,
