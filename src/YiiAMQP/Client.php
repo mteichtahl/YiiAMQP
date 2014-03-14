@@ -1,12 +1,10 @@
 <?php
 
-
 namespace YiiAMQP;
 use PhpAmqpLib\Connection\AMQPConnection;
 use YiiAMQP\Meta\AbstractMetaClient;
 
-define('AMQP_DEBUG', false);
-
+defined('AMQP_DEBUG') or define('AMQP_DEBUG',false);
 
 /**
  * # AMQP Client
