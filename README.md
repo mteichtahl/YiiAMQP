@@ -46,7 +46,7 @@ Initialise the component
 Yii::app()->mq->defaultQueue->consume(function($message){ print_r($message); });
 Yii::app()->mq->queues->myQueue->consume(function($message){ print_r($message); });
 Yii::app()->mq->wait(); // wait for results
-
+```
 
 ##Contributing
 Please submit all pull requests against *-wip branches. Thanks!
