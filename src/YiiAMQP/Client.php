@@ -292,8 +292,9 @@ class Client extends \CApplicationComponent
      */
     protected function createQueueCollection($data = array())
     {
-        $collection = new QueueCollection($data);
+        $collection = new QueueCollection();
         $collection->setClient($this);
+        $collection->copyFrom($data);
         return $collection;
     }
 
@@ -328,8 +329,9 @@ class Client extends \CApplicationComponent
      */
     protected function createExchangeCollection($data = array())
     {
-        $collection = new ExchangeCollection($data);
+        $collection = new ExchangeCollection();
         $collection->setClient($this);
+        $collection->copyFrom($data);
         return $collection;
     }
 
