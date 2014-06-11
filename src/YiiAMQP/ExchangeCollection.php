@@ -42,6 +42,20 @@ class ExchangeCollection extends \CAttributeCollection
     }
 
     /**
+     * @inheritDoc
+     */
+    public function add($key, $value)
+    {
+        if (!($value instanceof Exchange))
+            $value = $this->createExchange($key, $value);
+        else {
+            $value->name = $key;
+            $value->setClient($this->getClient());
+        }
+        parent::add($key, $value);
+    }
+
+    /**
      * Gets the exchange with the given name, or creates it if it doesn't exist.
      * @param string $key the name of the exchange
      *
@@ -72,12 +86,15 @@ class ExchangeCollection extends \CAttributeCollection
      * Creates an exchange for the collection
      *
      * @param string $name the name of the exchange to create
+     * @param array $config the exchange configuration
      *
      * @return Exchange the exchange instance
      */
-    protected function createExchange($name)
+    protected function createExchange($name, $config = array())
     {
         $exchange = new Exchange();
+        foreach($config as $key => $value)
+            $exchange->{$key} = $value;
         $exchange->name = strtolower($name);
         $exchange->setClient($this->getClient());
         return $exchange;
