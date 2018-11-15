@@ -13,5 +13,8 @@
         "psr-0": {
             "YiiAMQP": "src/"
         }
+    },
+    "require-dev": {
+        "yiisoft/yii": "^1.1"
     }
 }
