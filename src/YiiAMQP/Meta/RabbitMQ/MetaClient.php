@@ -34,7 +34,6 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
         return $this->_client;
     }
 
-
     /**
      * @param \GuzzleHttp\Client $guzzle
      */
@@ -73,11 +72,10 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
         return $guzzle;
     }
 
-
     /**
      * Fetches the available exchanges from the message queue
      *
-     * @return array Exchange the available exchanges
+     * @return Exchange[] Exchange the available exchanges
      * @throws \CException
      */
     public function fetchExchanges()
@@ -101,7 +99,7 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
     /**
      * Fetches the available queues from the message queue
      *
-     * @return array Exchange the available queues
+     * @return Queue[] Exchange the available queues
      * @throws \CException
      */
     public function fetchQueues()
