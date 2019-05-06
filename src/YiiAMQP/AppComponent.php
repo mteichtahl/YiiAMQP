@@ -15,6 +15,10 @@
 
 namespace YiiAMQP;
 
+use PhpAmqpLib\Channel\AMQPChannel;
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
+
 /**
  * YiiAMQP
  *
@@ -27,18 +31,46 @@ namespace YiiAMQP;
  */
 class AppComponent extends \CApplicationComponent {
 
+    /**
+     * Configuration / credentials.
+     *
+     * @var array
+     */
     public $server;
+
+    /**
+     * @var AMQPStreamConnection
+     */
     public $connection;
+
+    /**
+     * @var AMQPChannel
+     */
     public $channel;
+
     public $queue;
+
+    /**
+     * Exchange name.
+     *
+     * @var string
+     */
     public $exchange;
+
     public $managementQueue;
+
     public $managementExchange;
+
     public $managementCallback;
+
     public $exchangeName;
+
     public $exchangeType;
+
     public $queueName;
+
     private $callback;
+
     private $client;
 
     /**
@@ -72,8 +104,13 @@ class AppComponent extends \CApplicationComponent {
         if ($vhost)
             $this->server['vhost'] = $vhost;
 
-// create the connection using $server as the config
-        $this->connection = new \PhpAmqpLib\Connection\AMQPConnection($this->server['host'], $this->server['port'], $this->server['user'], $this->server['password'], $this->server['vhost']);
+        $this->connection = new AMQPStreamConnection(
+            $this->server['host'],
+            $this->server['port'],
+            $this->server['user'],
+            $this->server['password'],
+            $this->server['vhost']
+        );
 
         if (!$this->connection) {
             \Yii::log('[' . get_class() . '] Cannot create connection', 'error');
@@ -133,7 +170,7 @@ class AppComponent extends \CApplicationComponent {
      *
      */
     public function sendTextMessage($msg, $routingKey = '') {
-        $message = new \PhpAmqpLib\Message\AMQPMessage($msg, array('content_type' => 'text/plain', 'delivery_mode' => 2));
+        $message = new AMQPMessage($msg, array('content_type' => 'text/plain', 'delivery_mode' => 2));
         $this->channel->basic_publish($message, $this->exchange, $routingKey);
     }
 
@@ -145,7 +182,7 @@ class AppComponent extends \CApplicationComponent {
      *
      */
     public function sendJSONMessage($msg, $routingKey = '') {
-        $message = new \PhpAmqpLib\Message\AMQPMessage($msg, array('content_type' => 'text/JSON', 'delivery_mode' => 2));
+        $message = new AMQPMessage($msg, array('content_type' => 'text/JSON', 'delivery_mode' => 2));
         $this->channel->basic_publish($message, $this->exchange, $routingKey);
     }
 
@@ -254,71 +291,6 @@ class AppComponent extends \CApplicationComponent {
             \Yii::log('[' . get_class() . '] Registering worker callback', 'info');
             $this->callback = $callback;
         }
-    }
-
-    /**
-     * Return general information about the rabbitMQ server/Cluster connected
-     *
-     * @return array
-     *
-     * */
-    public function getRabbitMQInfo() {
-
-        $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
-
-        $description = \Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
-        $this->client->setDescription($description);
-        $authPlugin = new \Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
-
-        $this->client->addSubscriber($authPlugin);
-
-
-        $command = $this->client->getCommand('overview');
-
-        return $this->client->execute($command);
-    }
-
-    /**
-     * Return general information about the rabbitMQ exchanges
-     *
-     * @return array
-     *
-     * */
-    public function getExchanges() {
-
-
-
-        $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
-
-        $description = \Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
-        $this->client->setDescription($description);
-        $authPlugin = new \Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
-
-        $this->client->addSubscriber($authPlugin);
-
-        $command = $this->client->getCommand('exchanges');
-
-        return $this->client->execute($command);
-    }
-
-    /**
-     * Return general information about the rabbitMQ queues
-     *
-     * @return array
-     *
-     * */
-    public function getQueues() {
-        $this->client = new RabbitMQService($this->server['host'] . ':1' . $this->server['port']);
-
-        $description = \Guzzle\Service\Description\ServiceDescription::factory(__DIR__ . '/rabbitMQ.json');
-        $this->client->setDescription($description);
-        $authPlugin = new \Guzzle\Plugin\CurlAuth\CurlAuthPlugin($this->server['user'], $this->server['password']);
-
-        $this->client->addSubscriber($authPlugin);
-
-        $command = $this->client->getCommand('queues');
-
-        return $this->client->execute($command);
     }
 
     /**

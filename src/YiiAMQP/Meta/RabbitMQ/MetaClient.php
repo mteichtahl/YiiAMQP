@@ -2,7 +2,6 @@
 
 namespace YiiAMQP\Meta\RabbitMQ;
 
-use Guzzle\Plugin\CurlAuth\CurlAuthPlugin;
 use YiiAMQP\Client;
 use YiiAMQP\Exchange;
 use YiiAMQP\Queue;
@@ -15,19 +14,9 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
     protected $_client;
 
     /**
-     * @var \Guzzle\Http\Client the guzzle client
+     * @var \GuzzleHttp\Client the guzzle client
      */
     protected $_guzzle;
-
-
-    /**
-     * Sets the AMQP client for the meta client
-     * @param \YiiAMQP\Client $client
-     */
-    public function setClient($client)
-    {
-        $this->_client = $client;
-    }
 
     /**
      * Gets the AMQP client for the meta client
@@ -45,9 +34,8 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
         return $this->_client;
     }
 
-
     /**
-     * @param \Guzzle\Http\Client $guzzle
+     * @param \GuzzleHttp\Client $guzzle
      */
     public function setGuzzle($guzzle)
     {
@@ -55,7 +43,8 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
     }
 
     /**
-     * @return \Guzzle\Http\Client
+     * @return \GuzzleHttp\Client
+     * @throws \CException
      */
     public function getGuzzle()
     {
@@ -66,31 +55,34 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
 
     /**
      * Creates a guzzle service client
-     * @return \Guzzle\Http\Client the guzzle client
+     *
+     * @return \GuzzleHttp\Client the guzzle client
+     * @throws \CException
      */
     protected function createGuzzle()
     {
-        $guzzle = new \Guzzle\Http\Client();
         $connectionConfig = $this->getClient()->getConnectionConfig();
+        $baseUri = 'http://'.$connectionConfig['host'].':1'.$connectionConfig['port'].'/';
 
-        $guzzle->setBaseUrl('http://'.$connectionConfig['host'].':1'.$connectionConfig['port'].'/');
-
-        $authPlugin = new CurlAuthPlugin($connectionConfig['user'], $connectionConfig['password']);
-        $guzzle->addSubscriber($authPlugin);
+        $guzzle = new \GuzzleHttp\Client(array(
+            'base_uri' => $baseUri,
+            'auth' => array($connectionConfig['user'], $connectionConfig['password']),
+        ));
 
         return $guzzle;
     }
 
-
     /**
      * Fetches the available exchanges from the message queue
-     * @return Exchange the available exchanges
+     *
+     * @return Exchange[] Exchange the available exchanges
+     * @throws \CException
      */
     public function fetchExchanges()
     {
         $guzzle = $this->getGuzzle();
-        $command = $guzzle->get('/api/exchanges');
-        $data = json_decode($command->send()->getBody(true), true);
+        $response = $guzzle->get('/api/exchanges');
+        $data = json_decode($response->getBody()->getContents(), true);
         $exchanges = array();
         foreach($data as $config) {
             $exchange = new Exchange();
@@ -106,13 +98,15 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
 
     /**
      * Fetches the available queues from the message queue
-     * @return Exchange the available queues
+     *
+     * @return Queue[] Exchange the available queues
+     * @throws \CException
      */
     public function fetchQueues()
     {
         $guzzle = $this->getGuzzle();
-        $command = $guzzle->get('/api/queues');
-        $data = json_decode($command->send()->getBody(true), true);
+        $response = $guzzle->get('/api/queues');
+        $data = json_decode($response->getBody()->getContents(), true);
         $queues = array();
         foreach($data as $config) {
             $queue = new Queue();
@@ -129,12 +123,14 @@ class MetaClient extends \YiiAMQP\Meta\AbstractMetaClient
 
     /**
      * Fetches the overview for Rabbit MQ
-     * @return array the overview for RabbitMQ
+     *
+     * @return array The overview for RabbitMQ
+     * @throws \CException
      */
     public function fetchOverview()
     {
         $guzzle = $this->getGuzzle();
-        $command = $guzzle->get('/api/queues');
-        return json_decode($command->send()->getBody(true), true);
+        $response = $guzzle->get('/api/queues');
+        return json_decode($response->getBody()->getContents(), true);
     }
 }
